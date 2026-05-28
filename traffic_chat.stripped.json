@@ -1,0 +1,2283 @@
+{
+  "responderUsername": "GitHub Copilot",
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_fc56003f-cd14-4460-a6b9-ae490ff29508",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 1248
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 14,
+              "endColumn": 504
+            },
+            "text": "I have the following requirements.\n\n====\nWrite a program that models a traffic intersection.\n\nThe intersection is a four-way intersection. Each part of the intersection has four lanes:\n\nA left turn lane\nTwo middle lanes that go straight\nA right turn lane\nThe light can either be red, yellow, or green. The left-hand turn lane has its own dedicated light. That light can either be red, yellow, green, or flashing orange (go if no cars are coming the other way).\n\nThe UI for this is up to you. You could build a terminal UI with ncurses or something like that. You could render to a <canvas> element. You could make an API call to OpenAI to generate an image based on the state of your program! Whatever you like. Just show good taste and polish.\nPresent me some options for the UI part of this. I don't want to do something in the terminal or openAI image generation. I want a somewhat responsive UI of some kind. it can update every second or faster, can just be generated svgs, etc, but I ant to be able to see each lane's current light and where cars are on the road from each direction. the display can be simple as long as it is easy to understand teh state of the intersection. a canvas element or all html with svgs is ok, or anything similar",
+            "kind": "text"
+          }
+        ],
+        "text": "I have the following requirements.\n\n====\nWrite a program that models a traffic intersection.\n\nThe intersection is a four-way intersection. Each part of the intersection has four lanes:\n\nA left turn lane\nTwo middle lanes that go straight\nA right turn lane\nThe light can either be red, yellow, or green. The left-hand turn lane has its own dedicated light. That light can either be red, yellow, green, or flashing orange (go if no cars are coming the other way).\n\nThe UI for this is up to you. You could build a terminal UI with ncurses or something like that. You could render to a <canvas> element. You could make an API call to OpenAI to generate an image based on the state of your program! Whatever you like. Just show good taste and polish.\nPresent me some options for the UI part of this. I don't want to do something in the terminal or openAI image generation. I want a somewhat responsive UI of some kind. it can update every second or faster, can just be generated svgs, etc, but I ant to be able to see each lane's current light and where cars are on the road from each direction. the display can be simple as long as it is easy to understand teh state of the intersection. a canvas element or all html with svgs is ok, or anything similar"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779850402642,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_ad4a8472-2fa8-43a0-9d23-6928d1e9c588",
+      "result": {
+        "errorDetails": {
+          "code": "canceled",
+          "message": "Canceled",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "firstProgress": 2453,
+          "totalElapsed": 6541
+        },
+        "details": "GPT-5.3-Codex • 0.9x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779850409126
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 218,
+      "elapsedMs": 6484
+    },
+    {
+      "requestId": "request_e95ed0be-7a3e-4315-b76b-2d8289e04045",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 173
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 174
+            },
+            "text": "no I just want you to present me options. this will be a basic frontend react application. don't worry about scaffolding anything, just present some options I can consider. ",
+            "kind": "text"
+          }
+        ],
+        "text": "no I just want you to present me options. this will be a basic frontend react application. don't worry about scaffolding anything, just present some options I can consider. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779850438169,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": false,
+        "modeInstructions": {
+          "uri": {
+            "$mid": 1,
+            "external": "vscode-userdata:/Users/nathanbogan/Library/Application%20Support/Code/User/globalStorage/github.copilot-chat/ask-agent/Ask.agent.md",
+            "path": "/Users/nathanbogan/Library/Application Support/Code/User/globalStorage/github.copilot-chat/ask-agent/Ask.agent.md",
+            "scheme": "vscode-userdata"
+          },
+          "name": "Ask",
+          "content": "You are an ASK AGENT — a knowledgeable assistant that answers questions, explains code, and provides information.\n\nYour job: understand the user's question → research the codebase as needed → provide a clear, thorough answer. You are strictly read-only: NEVER modify files or run commands that change state.\n\n<rules>\n- NEVER use file editing tools, terminal commands that modify state, or any write operations\n- Focus on answering questions, explaining concepts, and providing information\n- Use search and read tools to gather context from the codebase when needed\n- Provide code examples in your responses when helpful, but do NOT apply them\n- Use #tool:vscode/askQuestions to clarify ambiguous questions before researching\n- When the user's question is about code, reference specific files and symbols\n- If a question would require making changes, explain what changes would be needed but do NOT make them\n</rules>\n\n<capabilities>\nYou can help with:\n- **Code explanation**: How does this code work? What does this function do?\n- **Architecture questions**: How is the project structured? How do components interact?\n- **Debugging guidance**: Why might this error occur? What could cause this behavior?\n- **Best practices**: What's the recommended approach for X? How should I structure Y?\n- **API and library questions**: How do I use this API? What does this method expect?\n- **Codebase navigation**: Where is X defined? Where is Y used?\n- **General programming**: Language features, algorithms, design patterns, etc.\n</capabilities>\n\n<workflow>\n1. **Understand** the question — identify what the user needs to know\n2. **Research** the codebase if needed — use search and read tools to find relevant code\n3. **Clarify** if the question is ambiguous — use #tool:vscode/askQuestions\n4. **Answer** clearly — provide a well-structured response with references to relevant code\n</workflow>",
+          "toolReferences": [
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 1758,
+                "endExclusive": 1783
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 649,
+                "endExclusive": 674
+              }
+            }
+          ],
+          "isBuiltin": false
+        },
+        "modeId": "custom",
+        "modeName": "Ask",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_60c0233b-25b1-4289-9c97-db3e69586ec5",
+      "result": {
+        "timings": {
+          "firstProgress": 4117,
+          "totalElapsed": 14030
+        },
+        "details": "GPT-5.3-Codex • 0.9x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779850452247
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 757,
+      "elapsedMs": 14078
+    },
+    {
+      "requestId": "request_1d445a4d-6710-4fe8-bd05-c4523f049ae7",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 1711
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 21,
+              "endColumn": 1
+            },
+            "text": "let's use option four and our original prompt with some more rules.\n\n\n===\nCreate a traffic signal whose lights change on a timer.\nModel cars arriving at the intersection and traveling through while the light is green.\nMake the left-hand turn lights on opposite sides of the intersection turn green at the same time, letting cars safely turn left. the stright lanes need to turn yellow, then red, then wait a second before the left turn lanes turn green. \nAdd support for a \"walk\" button at each intersection. When the button is pressed, it should cause the intersection to become clear long enough for a person to walk through it.\n===\n\n\nThis means each direction (NS and EW) should manage quite a bit of logic; each needs an amount of time minimum to stay green for each state (ie 10 second for left turners, 20 seconds for straight). one direction should be the \"priority direction\", so that once the non priority direction reaches its minimum green, it changes back to the priority until a car gets stopped in the non priority lane and at least the priority lane's minimum has gone off. \n\nthe \"walking direction\" should be the parallel direction, ie if a ped hits the button to cross NS, the light needs to be straight green for the EW lane. so the walking state for crossing NS should be tracked for teh EW lane. \n\nwe should try to keep state as simple as possible. we have an active lane, a transition phase as the light goes yellow to red, then the other lane is active. active + left turn light is green, yellow, or has only been red for < 1 second means the straight must be red. only then can it turn green. \n\n\n\nWe should use vite and the latest version of React for this. no router needed, no extras. \n",
+            "kind": "text"
+          }
+        ],
+        "text": "let's use option four and our original prompt with some more rules.\n\n\n===\nCreate a traffic signal whose lights change on a timer.\nModel cars arriving at the intersection and traveling through while the light is green.\nMake the left-hand turn lights on opposite sides of the intersection turn green at the same time, letting cars safely turn left. the stright lanes need to turn yellow, then red, then wait a second before the left turn lanes turn green. \nAdd support for a \"walk\" button at each intersection. When the button is pressed, it should cause the intersection to become clear long enough for a person to walk through it.\n===\n\n\nThis means each direction (NS and EW) should manage quite a bit of logic; each needs an amount of time minimum to stay green for each state (ie 10 second for left turners, 20 seconds for straight). one direction should be the \"priority direction\", so that once the non priority direction reaches its minimum green, it changes back to the priority until a car gets stopped in the non priority lane and at least the priority lane's minimum has gone off. \n\nthe \"walking direction\" should be the parallel direction, ie if a ped hits the button to cross NS, the light needs to be straight green for the EW lane. so the walking state for crossing NS should be tracked for teh EW lane. \n\nwe should try to keep state as simple as possible. we have an active lane, a transition phase as the light goes yellow to red, then the other lane is active. active + left turn light is green, yellow, or has only been red for < 1 second means the straight must be red. only then can it turn green. \n\n\n\nWe should use vite and the latest version of React for this. no router needed, no extras. \n"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779851527608,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": false,
+        "modeInstructions": {
+          "uri": {
+            "$mid": 1,
+            "external": "vscode-userdata:/Users/nathanbogan/Library/Application%20Support/Code/User/globalStorage/github.copilot-chat/plan-agent/Plan.agent.md",
+            "path": "/Users/nathanbogan/Library/Application Support/Code/User/globalStorage/github.copilot-chat/plan-agent/Plan.agent.md",
+            "scheme": "vscode-userdata"
+          },
+          "name": "Plan",
+          "content": "You are a PLANNING AGENT, pairing with the user to create a detailed, actionable plan.\n\nYou research the codebase → clarify with the user → capture findings and decisions into a comprehensive plan. This iterative approach catches edge cases and non-obvious requirements BEFORE implementation begins.\n\nYour SOLE responsibility is planning. NEVER start implementation.\n\n**Current plan**: `/memories/session/plan.md` - update using #tool:vscode/memory .\n\n<rules>\n- STOP if you consider running file editing tools — plans are for others to execute. The only write tool you have is #tool:vscode/memory for persisting plans.\n- Use #tool:vscode/askQuestions freely to clarify requirements — don't make large assumptions\n- Present a well-researched plan with loose ends tied BEFORE implementation\n</rules>\n\n<workflow>\nCycle through these phases based on user input. This is iterative, not linear. If the user task is highly ambiguous, do only *Discovery* to outline a draft plan, then move on to alignment before fleshing out the full plan.\n\n## 1. Discovery\n\nRun the *Explore* subagent to gather context, analogous existing features to use as implementation templates, and potential blockers or ambiguities. When the task spans multiple independent areas (e.g., frontend + backend, different features, separate repos), launch **2-3 *Explore* subagents in parallel** — one per area — to speed up discovery.\n\nUpdate the plan with your findings.\n\n## 2. Alignment\n\nIf research reveals major ambiguities or if you need to validate assumptions:\n- Use #tool:vscode/askQuestions to clarify intent with the user.\n- Surface discovered technical constraints or alternative approaches\n- If answers significantly change the scope, loop back to **Discovery**\n\n## 3. Design\n\nOnce context is clear, draft a comprehensive implementation plan.\n\nThe plan should reflect:\n- Structured concise enough to be scannable and detailed enough for effective execution\n- Step-by-step implementation with explicit dependencies — mark which steps can run in parallel vs. which block on prior steps\n- For plans with many steps, group into named phases that are each independently verifiable\n- Verification steps for validating the implementation, both automated and manual\n- Critical architecture to reuse or use as reference — reference specific functions, types, or patterns, not just file names\n- Critical files to be modified (with full paths)\n- Explicit scope boundaries — what's included and what's deliberately excluded\n- Reference decisions from the discussion\n- Leave no ambiguity\n\nSave the comprehensive plan document to `/memories/session/plan.md` via #tool:vscode/memory, then show the scannable plan to the user for review. You MUST show plan to the user, as the plan file is for persistence only, not a substitute for showing it to the user.\n\n## 4. Refinement\n\nOn user input after showing the plan:\n- Changes requested → revise and present updated plan. Update `/memories/session/plan.md` to keep the documented plan in sync\n- Questions asked → clarify, or use #tool:vscode/askQuestions for follow-ups\n- Alternatives wanted → loop back to **Discovery** with new subagent\n- Approval given → acknowledge, the user can now use handoff buttons\n\nKeep iterating until explicit approval or handoff.\n</workflow>\n\n<plan_style_guide>\n```markdown\n## Plan: {Title (2-10 words)}\n\n{TL;DR - what, why, and how (your recommended approach).}\n\n**Steps**\n1. {Implementation step-by-step — note dependency (\"*depends on N*\") or parallelism (\"*parallel with step N*\") when applicable}\n2. {For plans with 5+ steps, group steps into named phases with enough detail to be independently actionable}\n\n**Relevant files**\n- `{full/path/to/file}` — {what to modify or reuse, referencing specific functions/patterns}\n\n**Verification**\n1. {Verification steps for validating the implementation (**Specific** tasks, tests, commands, MCP tools, etc; not generic statements)}\n\n**Decisions** (if applicable)\n- {Decision, assumptions, and includes/excluded scope}\n\n**Further Considerations** (if applicable, 1-3 items)\n1. {Clarifying question with recommendation. Option A / Option B / Option C}\n2. {…}\n```\n\nRules:\n- NO code blocks — describe changes, link to files and specific symbols/functions\n- NO blocking questions at the end — ask during workflow via #tool:vscode/askQuestions\n- The plan MUST be presented to the user, don't just mention the plan file.\n</plan_style_guide>",
+          "toolReferences": [
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 4295,
+                "endExclusive": 4320
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 3035,
+                "endExclusive": 3060
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "copilot_memory",
+              "name": "Memory",
+              "range": {
+                "start": 2623,
+                "endExclusive": 2642
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 1537,
+                "endExclusive": 1562
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "vscode_askQuestions",
+              "icon": {
+                "id": "question"
+              },
+              "name": "Ask Clarifying Questions",
+              "range": {
+                "start": 625,
+                "endExclusive": 650
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "copilot_memory",
+              "name": "Memory",
+              "range": {
+                "start": 577,
+                "endExclusive": 596
+              }
+            },
+            {
+              "kind": "tool",
+              "id": "copilot_memory",
+              "name": "Memory",
+              "range": {
+                "start": 429,
+                "endExclusive": 448
+              }
+            }
+          ],
+          "isBuiltin": false
+        },
+        "modeId": "custom",
+        "modeName": "Plan",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_76785f81-6f05-4aad-abd3-3340d952bdcd",
+      "result": {
+        "timings": {
+          "firstProgress": 9251,
+          "totalElapsed": 131726
+        },
+        "details": "GPT-5.3-Codex • 0.9x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779851659384
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 49963,
+      "completionTokens": 3802,
+      "elapsedMs": 81813
+    },
+    {
+      "requestId": "request_c139d322-9123-47c6-9b73-a26aa53f2245",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 20
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 21
+            },
+            "text": "Start implementation",
+            "kind": "text"
+          }
+        ],
+        "text": "Start implementation"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779852582931,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_1c837991-ea0f-483a-99ae-a589301f17eb",
+      "result": {
+        "errorDetails": {
+          "code": "canceled",
+          "message": "Canceled",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "firstProgress": 4505,
+          "totalElapsed": 100662
+        },
+        "details": "GPT-5.4 mini • 0.3x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779852683462
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 25302,
+      "completionTokens": 1564,
+      "elapsedMs": 75229
+    },
+    {
+      "requestId": "request_6a6b8977-b376-4dbf-8a60-bdf1e1210175",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 51
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 52
+            },
+            "text": "I ran the command. continue as though it succeeded.",
+            "kind": "text"
+          }
+        ],
+        "text": "I ran the command. continue as though it succeeded."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779852701768,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_6f3e49e9-26a1-4e61-a73c-cc8d63d26b30",
+      "result": {
+        "timings": {
+          "firstProgress": 3847,
+          "totalElapsed": 627514
+        },
+        "details": "GPT-5.4 mini • 0.3x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779853329334
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 138096,
+      "completionTokens": 49545,
+      "elapsedMs": 489470
+    },
+    {
+      "requestId": "request_c2a41032-7280-4a25-bdbc-e9408c22c74d",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 383
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 4,
+              "endColumn": 107
+            },
+            "text": "it appears that the EW cars are driving on the left side of the road and the NS cars are on the right side; let's make that configurable, but all cars need to drive on the same side. Tihs created alignment issues where cross traffic turnning right and left were misaligned. \n\n\nthe lanes that cars turn down after proceeding through the intersection should also have lane indicators. ",
+            "kind": "text"
+          }
+        ],
+        "text": "it appears that the EW cars are driving on the left side of the road and the NS cars are on the right side; let's make that configurable, but all cars need to drive on the same side. Tihs created alignment issues where cross traffic turnning right and left were misaligned. \n\n\nthe lanes that cars turn down after proceeding through the intersection should also have lane indicators. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779853519949,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_ea865e32-ddf1-498c-b646-64d93e875f50",
+      "result": {},
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779854026082
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 557,
+      "elapsedMs": 506133
+    },
+    {
+      "requestId": "request_d4322f27-0f16-4e47-ac1f-ea740f450660",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 9
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 10
+            },
+            "text": "continue ",
+            "kind": "text"
+          }
+        ],
+        "text": "continue "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779854029020,
+      "modelId": "copilot/auto",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_2b369d8b-056d-4b3a-a7dd-7d832f7c35fa",
+      "result": {
+        "errorDetails": {
+          "code": "canceled",
+          "message": "Canceled",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "totalElapsed": 151751
+        },
+        "details": "GPT-5.3-Codex • 0.9x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779854180651
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "elapsedMs": 151631
+    },
+    {
+      "requestId": "request_263e6d17-f1c8-47ef-aacf-1c079a61da06",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 9
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 10
+            },
+            "text": "continue ",
+            "kind": "text"
+          }
+        ],
+        "text": "continue "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779854186640,
+      "modelId": "copilot/claude-sonnet-4.6",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_d1c8b7ad-b096-4836-8cd4-3232aa340370",
+      "result": {
+        "errorDetails": {
+          "code": "length",
+          "message": "Sorry, the response hit the length limit. Please rephrase your prompt.",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "firstProgress": 3747,
+          "totalElapsed": 395579
+        },
+        "details": "Claude Sonnet 4.6 • 1x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 3,
+        "completedAt": 1779854582273
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 689,
+      "elapsedMs": 395633
+    },
+    {
+      "requestId": "request_41a66ec4-802b-453e-bcb7-5e7c5bb558a7",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 6
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 7
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 6,
+              "endExclusive": 16
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 7,
+              "endLineNumber": 1,
+              "endColumn": 17
+            },
+            "text": " Try Again",
+            "kind": "text"
+          }
+        ],
+        "text": "@agent Try Again"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779854615071,
+      "confirmation": "Try Again",
+      "modelId": "copilot/claude-sonnet-4.6",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_bac8a0a7-0cf1-4be9-a947-f2839ea8bbb0",
+      "result": {
+        "errorDetails": {
+          "code": "length",
+          "message": "Sorry, the response hit the length limit. Please rephrase your prompt.",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "totalElapsed": 418350
+        },
+        "details": "Claude Sonnet 4.6 • 1x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 3,
+        "completedAt": 1779855033454
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "elapsedMs": 418383
+    },
+    {
+      "requestId": "request_20b64b50-059b-4190-bcc2-f85255cb7ee3",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 6
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 7
+            },
+            "kind": "agent"
+          },
+          {
+            "range": {
+              "start": 6,
+              "endExclusive": 16
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 7,
+              "endLineNumber": 1,
+              "endColumn": 17
+            },
+            "text": " Try Again",
+            "kind": "text"
+          }
+        ],
+        "text": "@agent Try Again"
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779855059988,
+      "confirmation": "Try Again",
+      "modelId": "copilot/claude-sonnet-4.6",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_65c27813-a894-42c3-b38c-0bc53e784c04",
+      "result": {
+        "errorDetails": {
+          "code": "length",
+          "message": "Sorry, the response hit the length limit. Please rephrase your prompt.",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "totalElapsed": 381901
+        },
+        "details": "Claude Sonnet 4.6 • 1x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 3,
+        "completedAt": 1779855441911
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "elapsedMs": 381923
+    },
+    {
+      "requestId": "request_47aee1e2-b65f-49fc-b5d1-5e37323a77eb",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 321
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 322
+            },
+            "text": "it appears that the EW cars are driving on the left side of the road and the NS cars are on the right side; they should all drive on the right side of the road. make sur ethe lanes are aligned relative to where they came from too. Tihs created alignment issues where cross traffic turnning right and left were misaligned.",
+            "kind": "text"
+          }
+        ],
+        "text": "it appears that the EW cars are driving on the left side of the road and the NS cars are on the right side; they should all drive on the right side of the road. make sur ethe lanes are aligned relative to where they came from too. Tihs created alignment issues where cross traffic turnning right and left were misaligned."
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779855526713,
+      "modelId": "copilot/claude-sonnet-4.6",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_ba437021-f7e1-4be1-bdc2-4bfeb4d87ad4",
+      "result": {
+        "errorDetails": {
+          "code": "canceled",
+          "message": "Canceled",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "totalElapsed": 276360
+        },
+        "details": "Claude Sonnet 4.6 • 1x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779855802855
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "elapsedMs": 276142
+    },
+    {
+      "requestId": "request_106d2738-60a1-43d6-a24a-4a80ec568e0e",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 10
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 11
+            },
+            "text": "try again ",
+            "kind": "text"
+          }
+        ],
+        "text": "try again "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779855809413,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_c6eb1bb6-d3dc-4459-a0a4-0c3131076139",
+      "result": {
+        "timings": {
+          "firstProgress": 174723,
+          "totalElapsed": 304507
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779856113980
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 15572,
+      "completionTokens": 30550,
+      "elapsedMs": 288995
+    },
+    {
+      "requestId": "request_ee285365-4246-4826-97a6-4add32277a55",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 349
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 350
+            },
+            "text": "let's consider what happens when the light is yellow. currently, the cars all stop when their direction turns yellow. instead, we should calculate if the car can get into the intersection before the light becomes red; if so, continue on. if not, slow down to a stop, making sutre to account for how many cars are in front and will also be stopping. ",
+            "kind": "text"
+          }
+        ],
+        "text": "let's consider what happens when the light is yellow. currently, the cars all stop when their direction turns yellow. instead, we should calculate if the car can get into the intersection before the light becomes red; if so, continue on. if not, slow down to a stop, making sutre to account for how many cars are in front and will also be stopping. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779856428557,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_637d4c96-3c9c-4c9b-bbf4-60fd7df022cf",
+      "result": {
+        "timings": {
+          "firstProgress": 3658,
+          "totalElapsed": 215195
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779856643682
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 130601,
+      "completionTokens": 7765,
+      "elapsedMs": 84524
+    },
+    {
+      "requestId": "request_b4fb62ac-775f-453d-87fb-40f7ed507220",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 365
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 366
+            },
+            "text": "now it apears that all of the cars are going all of the time; retahter than calculating the intersection as where the roads connect, it seems you have them stoping at the edge of the screen at the end of the outgoing lane, stoing no matter what. that's not what the intersection is; it should be stoping when aporaching the light, not the end of the outgoing lane. ",
+            "kind": "text"
+          }
+        ],
+        "text": "now it apears that all of the cars are going all of the time; retahter than calculating the intersection as where the roads connect, it seems you have them stoping at the edge of the screen at the end of the outgoing lane, stoing no matter what. that's not what the intersection is; it should be stoping when aporaching the light, not the end of the outgoing lane. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779856643824,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_8119089c-69e7-4d66-8540-c1a8b786f495",
+      "result": {
+        "timings": {
+          "firstProgress": 46475,
+          "totalElapsed": 305368
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779856949215
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 143135,
+      "completionTokens": 12201,
+      "elapsedMs": 162256
+    },
+    {
+      "requestId": "request_b1f7ab4d-4f0c-44d0-a77e-f1df7d5a9033",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 208
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 209
+            },
+            "text": "the cars are no longer stopping at the end of the outgoing lanes, but cars at red lights aren't stoping at the intersection core. the cars should stop just before the edestrian crosswalk if the light is red. ",
+            "kind": "text"
+          }
+        ],
+        "text": "the cars are no longer stopping at the end of the outgoing lanes, but cars at red lights aren't stoping at the intersection core. the cars should stop just before the edestrian crosswalk if the light is red. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779856949241,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_47e35d43-a875-4cea-925a-dc0670a801a0",
+      "result": {},
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779856989593
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 2517,
+      "elapsedMs": 40352
+    },
+    {
+      "requestId": "request_d666fddb-6f1c-4429-8ea9-645e7d1b3705",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 110
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 111
+            },
+            "text": "to clarify, cars don't ever stop. they all drive constantly, even if there is a red light for that direction. ",
+            "kind": "text"
+          }
+        ],
+        "text": "to clarify, cars don't ever stop. they all drive constantly, even if there is a red light for that direction. "
+      },
+      "variableData": {
+        "variables": []
+      },
+      "timestamp": 1779857013903,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_faf31b3b-08ac-4d85-9c29-08809199e1e0",
+      "result": {
+        "errorDetails": {
+          "code": "canceled",
+          "message": "Canceled",
+          "confirmationButtons": [
+            {
+              "data": {
+                "copilotContinueOnError": true
+              },
+              "label": "Try Again"
+            }
+          ],
+          "responseIsIncomplete": true
+        },
+        "timings": {
+          "firstProgress": 15455,
+          "totalElapsed": 434334
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779857448123
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 160767,
+      "completionTokens": 16538,
+      "elapsedMs": 273453
+    },
+    {
+      "requestId": "request_780099ba-f0b0-42ac-a171-969cfc2670d5",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 211
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 212
+            },
+            "text": "after running for awhile, the cars stop at the end of the outgoing lane and back up all across the lane in all directions; nothing ever stop as the intersection when red and everything everwhere gets backed up. ",
+            "kind": "text"
+          }
+        ],
+        "text": "after running for awhile, the cars stop at the end of the outgoing lane and back up all across the lane in all directions; nothing ever stop as the intersection when red and everything everwhere gets backed up. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [d74fef0e-1674-4f61-9ead-3a763f4a3841] Untitled (about:blank) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779857448301,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_a2a09c9a-ebb8-4960-b125-ea660c925590",
+      "result": {
+        "timings": {
+          "firstProgress": 12913,
+          "totalElapsed": 52734
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779857501106
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 2794,
+      "elapsedMs": 52805
+    },
+    {
+      "requestId": "request_55712da5-d0ec-4757-8f70-bd92222beafa",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 348
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 349
+            },
+            "text": "we still don't seem to have the concept of a stop line for when the light is red. if I am northbound and the light is red, I should stop in the bottom middle, just befor ethe crosswalk. right now, all cars in all directions all go no matter what. we may be miscalculating if they can \"beat\" the red or maybe we haven't define where they must stop. ",
+            "kind": "text"
+          }
+        ],
+        "text": "we still don't seem to have the concept of a stop line for when the light is red. if I am northbound and the light is red, I should stop in the bottom middle, just befor ethe crosswalk. right now, all cars in all directions all go no matter what. we may be miscalculating if they can \"beat\" the red or maybe we haven't define where they must stop. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [d74fef0e-1674-4f61-9ead-3a763f4a3841] Untitled (about:blank) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779857602453,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_590b02bb-2c63-467a-a102-ecdcc80c1311",
+      "result": {
+        "timings": {
+          "firstProgress": 3628,
+          "totalElapsed": 170595
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779857773113
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 70960,
+      "completionTokens": 5136,
+      "elapsedMs": 99700
+    },
+    {
+      "requestId": "request_9a8954a9-99b2-4d5a-81c7-6b7b3fb21498",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 228
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 229
+            },
+            "text": "let's examine our lef tturn logic; right now, the oposing directions overlap each other because we do a single 90 degree angle turn; we need to split it into two 45 degree angle turns to prevent cars running into each overther. ",
+            "kind": "text"
+          }
+        ],
+        "text": "let's examine our lef tturn logic; right now, the oposing directions overlap each other because we do a single 90 degree angle turn; we need to split it into two 45 degree angle turns to prevent cars running into each overther. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (about:blank) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779858079303,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_5c1e15ed-5046-4794-bbf5-e81c23e59cd2",
+      "result": {
+        "timings": {
+          "firstProgress": 5175,
+          "totalElapsed": 166493
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779858245899
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 11798,
+      "elapsedMs": 166596
+    },
+    {
+      "requestId": "request_5a99e704-b884-495e-8f63-ea2286a1c00d",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 385
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 3,
+              "endColumn": 86
+            },
+            "text": "let's evaluate our UI when we have the walk sign active. the turn lanes for the opposite street (IE if we are crossing NS, the EW right turners shouldn't go. walk sign shouldn't be on when left turn light is on). but the straight can still go. then right can continue once the walk sign completes. \n\nwe also need a simple way of showing a small pedestrian walking along the crosswalk. ",
+            "kind": "text"
+          }
+        ],
+        "text": "let's evaluate our UI when we have the walk sign active. the turn lanes for the opposite street (IE if we are crossing NS, the EW right turners shouldn't go. walk sign shouldn't be on when left turn light is on). but the straight can still go. then right can continue once the walk sign completes. \n\nwe also need a simple way of showing a small pedestrian walking along the crosswalk. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (about:blank) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779898725991,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_9642f4db-046d-4d23-8ef4-36c70542dabc",
+      "result": {
+        "timings": {
+          "firstProgress": 5289,
+          "totalElapsed": 231105
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779898957187
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 39913,
+      "completionTokens": 13808,
+      "elapsedMs": 191283
+    },
+    {
+      "requestId": "request_0a8335d4-aa7e-4c6a-a73f-8b7093c8f19f",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 254
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 255
+            },
+            "text": "One car sneaked through, I think we have a race condition. when I queued the walk, the first car to turn right turned right, then the rest stopped and waited until the walk completed. make sure we are considering teh crossing state before allowing that. ",
+            "kind": "text"
+          }
+        ],
+        "text": "One car sneaked through, I think we have a race condition. when I queued the walk, the first car to turn right turned right, then the rest stopped and waited until the walk completed. make sure we are considering teh crossing state before allowing that. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (about:blank) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779899047194,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_62dd4b31-3eb3-41e5-aac9-11f04ef708ac",
+      "result": {
+        "timings": {
+          "firstProgress": 24492,
+          "totalElapsed": 8372268
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 2,
+        "completedAt": 1779907419516
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 8282660,
+      "completionTokens": 7866,
+      "elapsedMs": 89662
+    },
+    {
+      "requestId": "request_8a844d3b-bdfd-4476-8ca1-73422251dd6f",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 64
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 65
+            },
+            "text": "let's greatly reduce the amount of traffic we get by about 70%. ",
+            "kind": "text"
+          }
+        ],
+        "text": "let's greatly reduce the amount of traffic we get by about 70%. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779907419544,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/Users/nathanbogan/codingProjects/trafficIntersection/src/App.tsx",
+            "external": "file:///Users/nathanbogan/codingProjects/trafficIntersection/src/App.tsx",
+            "path": "/Users/nathanbogan/codingProjects/trafficIntersection/src/App.tsx",
+            "scheme": "file"
+          }
+        }
+      ],
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_83158fd4-def8-4f89-a84c-b7cd2750005a",
+      "result": {
+        "timings": {
+          "firstProgress": 4920,
+          "totalElapsed": 9762
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779907429355
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 607,
+      "elapsedMs": 9811
+    },
+    {
+      "requestId": "request_43891de0-c368-48f0-870d-12bf6f782d9d",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 355
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 3,
+              "endColumn": 167
+            },
+            "text": "Now we need to consider the concept of flashing yellow left turn light; when straight is green, then we should have the left be flashing yellow, then turn green after the straight stops. \n\nWhen this is the case, the left turning cars must consider if they will hit a straight moving car if they go. if they can make it, then turn left on flashing yellow. ",
+            "kind": "text"
+          }
+        ],
+        "text": "Now we need to consider the concept of flashing yellow left turn light; when straight is green, then we should have the left be flashing yellow, then turn green after the straight stops. \n\nWhen this is the case, the left turning cars must consider if they will hit a straight moving car if they go. if they can make it, then turn left on flashing yellow. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779907509061,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_fcc8ff59-96ec-41e9-9f51-523c40ad5a2f",
+      "result": {
+        "timings": {
+          "firstProgress": 25303,
+          "totalElapsed": 109819
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779907618952
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 9503,
+      "elapsedMs": 109891
+    },
+    {
+      "requestId": "request_7f75eaf1-5136-4e22-8c1f-2bd77de2a799",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 291
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 292
+            },
+            "text": "what triggers the left turning cars to check again if teh intersection is clear? They are stopping and only sometimes trying to turn when it is clear. left turners should also only care about oncoming straight drivers; the right turners have there own lane and left turners don't interfere. ",
+            "kind": "text"
+          }
+        ],
+        "text": "what triggers the left turning cars to check again if teh intersection is clear? They are stopping and only sometimes trying to turn when it is clear. left turners should also only care about oncoming straight drivers; the right turners have there own lane and left turners don't interfere. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779907718658,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_31769912-9753-4a7f-b6d8-a81cd689bfba",
+      "result": {
+        "timings": {
+          "firstProgress": 14119,
+          "totalElapsed": 116388
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779907835130
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 8590,
+      "elapsedMs": 116472
+    },
+    {
+      "requestId": "request_d40c2101-baf9-40a4-a287-fe9db7c3f455",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 285
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 286
+            },
+            "text": "left turners are still sitting at a flashing yellow light, even with no oncoming traffic at all. if nothing is clearly an outlier, like using the wrong speed, miscalculating the intersection, or something liek that, we need to add relevant debugging instead of guessing new solutions. ",
+            "kind": "text"
+          }
+        ],
+        "text": "left turners are still sitting at a flashing yellow light, even with no oncoming traffic at all. if nothing is clearly an outlier, like using the wrong speed, miscalculating the intersection, or something liek that, we need to add relevant debugging instead of guessing new solutions. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779907932834,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_d16d66c2-ebca-4886-a113-1f6a5f400267",
+      "result": {
+        "timings": {
+          "firstProgress": 7020,
+          "totalElapsed": 50953
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779907983857
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 3653,
+      "elapsedMs": 51023
+    },
+    {
+      "requestId": "request_d7fa345a-3f44-4123-8c66-01bca0595b6c",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 94
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 95
+            },
+            "text": "when 1 axis has a protected left turn, the opposite axis should have a green right turn light ",
+            "kind": "text"
+          }
+        ],
+        "text": "when 1 axis has a protected left turn, the opposite axis should have a green right turn light "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779908238759,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_0bdbead3-98dc-41b9-b6d1-efddf2f3d1f1",
+      "result": {
+        "timings": {
+          "firstProgress": 12529,
+          "totalElapsed": 37937
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779908276781
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 2375,
+      "elapsedMs": 38022
+    },
+    {
+      "requestId": "request_3e2f49d0-b52f-486a-a7b5-434170be7e0f",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 97
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 98
+            },
+            "text": "the light needs to be green for the right turning lanes as well, not just the left turning ones. ",
+            "kind": "text"
+          }
+        ],
+        "text": "the light needs to be green for the right turning lanes as well, not just the left turning ones. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779908402556,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_c8bc0f78-024c-4fb6-af99-b23b13db8645",
+      "result": {
+        "timings": {
+          "firstProgress": 6481,
+          "totalElapsed": 36515
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779908439150
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 2430,
+      "elapsedMs": 36594
+    },
+    {
+      "requestId": "request_c56a5114-aa6e-4609-ab1c-8f6eff87b1c2",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 289
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 290
+            },
+            "text": "now it's green for left and right on the active left turn light and green for the other direction; it shouldn't be green for left and right on the same direction, that would cause an accident. also, the right turn greens need to turn yellow at the same time as teh left turn turns yellow. ",
+            "kind": "text"
+          }
+        ],
+        "text": "now it's green for left and right on the active left turn light and green for the other direction; it shouldn't be green for left and right on the same direction, that would cause an accident. also, the right turn greens need to turn yellow at the same time as teh left turn turns yellow. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779908683831,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_7dfd294a-e3fd-4c0e-82cd-03b1c07344f2",
+      "result": {
+        "timings": {
+          "firstProgress": 11039,
+          "totalElapsed": 25480
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779908709384
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 1975,
+      "elapsedMs": 25553
+    },
+    {
+      "requestId": "request_7c5ee20a-4a06-4549-8283-54ca97b4b5ed",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 356
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 357
+            },
+            "text": "left turning cars need to care about more than the front car, because when multiple straight drivers are in line, the car can not strike the front one by going behind it but hitting the next car. or we are having a different issue where we aren't evaluating each left turning car separately, but determining if the lane is currently turnable or something. ",
+            "kind": "text"
+          }
+        ],
+        "text": "left turning cars need to care about more than the front car, because when multiple straight drivers are in line, the car can not strike the front one by going behind it but hitting the next car. or we are having a different issue where we aren't evaluating each left turning car separately, but determining if the lane is currently turnable or something. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779909328556,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_ebd10e11-4451-4b7b-bca3-4bc8c3058400",
+      "result": {
+        "timings": {
+          "firstProgress": 6466,
+          "totalElapsed": 30134
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779909358757
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 2129,
+      "elapsedMs": 30201
+    },
+    {
+      "requestId": "request_c0affeb1-6f4e-4789-bad3-ab48a2b7c750",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 310
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 311
+            },
+            "text": "we don't appear to be calculating the intersection delta correctly then. I'm seeing cars from 1/2 way up the incoming straight lane be hit by the opposite directions left turners; the left turners aren't ensuring enough space to prevent a collision. make sure we faactor in teh turning path when doing the math",
+            "kind": "text"
+          }
+        ],
+        "text": "we don't appear to be calculating the intersection delta correctly then. I'm seeing cars from 1/2 way up the incoming straight lane be hit by the opposite directions left turners; the left turners aren't ensuring enough space to prevent a collision. make sure we faactor in teh turning path when doing the math"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779909557225,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_e486b78c-34f7-4a94-a54c-511c2ca7e1a4",
+      "result": {
+        "timings": {
+          "firstProgress": 34730,
+          "totalElapsed": 178573
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779909735874
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 16675,
+      "elapsedMs": 178649
+    },
+    {
+      "requestId": "request_542be1e1-4a65-4184-af7e-e12b58e52321",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 107
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 108
+            },
+            "text": "examine our priority vs no priority direction and how that changes the flow of the lights changing colors. ",
+            "kind": "text"
+          }
+        ],
+        "text": "examine our priority vs no priority direction and how that changes the flow of the lights changing colors. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779910023162,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_43393626-e239-4a89-bf6e-3182c2bfa7b3",
+      "result": {
+        "timings": {
+          "firstProgress": 4138,
+          "totalElapsed": 28596
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779910051832
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 1720,
+      "elapsedMs": 28670
+    },
+    {
+      "requestId": "request_e23c0346-aaaa-45bc-90e9-80331c1b3008",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 172
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 173
+            },
+            "text": "I want a slider that configures how busy the road is. the current setting should be the middle so that I can slow it way down to test the prioirty or increase it if I want ",
+            "kind": "text"
+          }
+        ],
+        "text": "I want a slider that configures how busy the road is. the current setting should be the middle so that I can slow it way down to test the prioirty or increase it if I want "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779910145560,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_50afc53d-4b47-4fef-9dbf-3b5921397c67",
+      "result": {
+        "timings": {
+          "firstProgress": 4302,
+          "totalElapsed": 69489
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779910215131
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 4727,
+      "elapsedMs": 69571
+    },
+    {
+      "requestId": "request_0305b494-70c4-4286-a1ec-e8f5c9489661",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 130
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 131
+            },
+            "text": "the priority lane busyness should be 40% higher than the slider value so that it gets more traffic on it, like. areal road would. ",
+            "kind": "text"
+          }
+        ],
+        "text": "the priority lane busyness should be 40% higher than the slider value so that it gets more traffic on it, like. areal road would. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] Untitled (http://localhost:5173/) (active)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779910216156,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_a5f52168-493c-442a-9fe5-4ef93e802d3c",
+      "result": {
+        "timings": {
+          "firstProgress": 5284,
+          "totalElapsed": 16273
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779910232515
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 821,
+      "elapsedMs": 16359
+    },
+    {
+      "requestId": "request_bdbfe4ed-677a-4877-b661-40cef387a6b8",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 100
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 101
+            },
+            "text": "create a SIMULATOR_README.MD that explains the flow of the application and how the simluation works ",
+            "kind": "text"
+          }
+        ],
+        "text": "create a SIMULATOR_README.MD that explains the flow of the application and how the simluation works "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] EW left yellow | Traffic Intersection (http://localhost:5173/) (not visible)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779940446686,
+      "editedFileEvents": [
+        {
+          "eventKind": 3,
+          "uri": {
+            "$mid": 1,
+            "fsPath": "/Users/nathanbogan/codingProjects/trafficIntersection/src/sim.ts",
+            "external": "file:///Users/nathanbogan/codingProjects/trafficIntersection/src/sim.ts",
+            "path": "/Users/nathanbogan/codingProjects/trafficIntersection/src/sim.ts",
+            "scheme": "file"
+          }
+        }
+      ],
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_815c950f-7802-47ad-b830-8addc718ff87",
+      "result": {
+        "timings": {
+          "firstProgress": 2994,
+          "totalElapsed": 64256
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779940511093
+      },
+      "contentReferences": [],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 5655,
+      "elapsedMs": 64407
+    },
+    {
+      "requestId": "request_8188eb4d-8d86-4c62-ad9d-44a484d7622c",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 395
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 396
+            },
+            "text": "the attached image shows our stoplights. they show in the lines that cars drive over and are covered by those cars. we should elevate them to show above the cars driving underneath and move them to inside the intersection facing teh lane of traffic it controls. make sure to line the right turn light on the right side for each lane, considering the different perspectives they are coming from. ",
+            "kind": "text"
+          }
+        ],
+        "text": "the attached image shows our stoplights. they show in the lines that cars drive over and are covered by those cars. we should elevate them to show above the cars driving underneath and move them to inside the intersection facing teh lane of traffic it controls. make sure to line the right turn light on the right side for each lane, considering the different perspectives they are coming from. "
+      },
+      "variableData": {
+        "variables": [
+          {
+            "id": "file:///var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot%202026-05-28%20at%2011.14.43%E2%80%AFAM.png",
+            "name": "Screenshot 2026-05-28 at 11.14.43 AM.png",
+            "fullName": "/var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot 2026-05-28 at 11.14.43 AM.png",
+            "value": {
+              "$base64": "iVBORw0KGgoAAAANSUhEUgAAATkAAAFNCAYAAAB7UhgmAAABSGlDQ1BJQ0MgUHJvZmlsZQAAKJF9kD9LQmEUhx/lWmARBRUEDk7RYBG3qKFJDSQoEftDtV2vpoHay/WGBS0NbbU3VPQNGuoDNAaNQTQ2RtDQ4lJxO69WWlEHDufh9/447zkH/IalVNEASmXXSSdi4eWV1XD7IwFCBJlkwLIrKppKzYqFz/o9arf4dL0Z1r1+v/8bwWyuYkt9lYzYynHBNyScqrpK85ZwryNDCe9rzjf4VHOmwRd1z0I6Lnwl3G0XrKzwne6ZadHzLVwqbtofM+jpO3PlxXmtS4ZIkGQJU/afJob5h3e87o2zgWIbh3XyFHAJExVFUSQnPEMZmxEiwiajkhP6xj9v19R20zB1LF8dNLXkA5xdQ89JUxs8krUP4dKvLMf6uqivZlTWxswGdzxBYM7znvuhrQrenue9dHneWx8Y93C+8w6CTllSpcwIPwAAAFZlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA5KGAAcAAAASAAAARKACAAQAAAABAAABOaADAAQAAAABAAABTQAAAABBU0NJSQAAAFNjcmVlbnNob3QmXUgVAAAB1mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyI+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4zMzM8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MzEzPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6VXNlckNvbW1lbnQ+U2NyZWVuc2hvdDwvZXhpZjpVc2VyQ29tbWVudD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CkgxtCQAAEAASURBVHgB7L0HnCZHcTfcm/dyPp0uJ+kUTumEkJCEghVAgAkGgQFjwIDAfm1+fLZfR8DYr+H7/AHva2xsE4wJJmOwBQIDSkhIQjnnS9LdSbqgy2lvb8P7/1d1zfTMM0/andm7vZ3efaamuquqq6u7a2p6UsvchScMtjjnBvHLgszMyq9Gn853LS1D54cwymuFAmm5Id7W0eVa29pBWabSAqUFRtIChw8ddIMD/cH8HEzM9wFM1OH4D85zNzgYyG9CHpjJD88wQBnCmQlRJIqKo1F12QzuDZANO9YQwS0f4gWHbMsfbGlFraiPEMlXK+WGV0Ao1U9CpBZ4u0FUloaUJrpHEk1yCZsYErQirVzC0g4Nj4NBzOcB/MQR0RlgIpq/iGDoLyDZ/EEWjPyD+QlC8DCFfkdxHa2UY/gg6m+BHiGEf2hFJt1EAFt1v9XDNsMZlYGWQrBBhMUJ4aHhhKRvbXNt+IWQ9MTJz5/we2g43Sf/WNbGMshi/YSQqrIroKgjG7CMKLzmd69xS5cvozlyr/ea332/W7Z8ae5yqW9RelNf6l2EPS6/8grRm8Lzln/FlZc7ys9bLuVRLuUXoXdR/di4HTAvQdzC+WmwjfMf89YgghMGJjbfE/4DPJav/N4/wE8YTj/Sih/9gNqQ/Z/i83gr/ZP4D+8vgIMLoSA9Mfyrxl7ABxjd8adlhEqnEAUJfCCBG18/PDr5FZJH6CQP/AFu+Qp93dABe6KLQNEOeOafiJMNNaNs/I8IvnTpUsdfEfWJ3ILaQ9lipwLkF2UPqhrpnXf/etlFjB/qvKQge1N2YfbmPKozPjCIdF4H0PyFzH/OY8qhT6E071cq+EAj859UnEweN//BU+LYP8TlRhdBqYVa05tR1gBPV9UrMjta+4JXJM7gRMqxFRwZWZB8dpQyvkEHjyx8BhkrKn8mBGMb5dMjW32EPAqEOPbTyVePbO6pDN0bGZx1Qm1uuZE25FO/lwjh+chTKV5ZORoyhzbPS76voRB7mGwKz0vfRH9BKOXmaQ/K98qKvYnmLp9ViEHUKnnLry1PIyrOe/MfCej7ymQQcn7zVDZBR378EnIE9/6jJYatICIdvZTQezziNzmEqC+1JqdsPPc1MdyVc2vkyDl0Jg4OVsTTXnrqAFJSeM6cidNzkw4KZa25MdRlUirZTWyYr0cPZpNWG0+seFxrKap+MQ02cdtzaJ+3N3XW3fzke9GF9EdkA+qtZs+3fyE0b3vI+PPK6hjJof8S47vY8Vd//mgExlaJf0hBGpSOhk6EAQthgg5ldf0DZDIik2U1QKPXlmtAxn0bE2nYrmtsSkBFtVEKiZMh8rgep85MXDMLy4UeHleSeV4g5mFNnmcXx0ifxHNvypFy79Do2EJchVZujY/n6LZvC5QjgZtGRdRP2WJrbMQWxPEbbvv8YV+EU/5w5SX4qSBSUfbwwnO1h+lPobnbQ4whWqu9sWv15TE+veRC7N2IfmhUNH/DeU69BLexi9M0GbseRuXYkQCJED+rk+WGq9w4kmM+k5UT8lTWcCkMytstAtFjI8QFNQ7y5hLgcnTDruGqCfPbsMvLx1zsoydHQzx9iMeRIBuqNbXQw3MhUSI/UIunpxwtp6I6GGI8bhZLmUQp2RMdhZc1k2dkoFTOGtk7udfr5dJWebZHlRXhuestdijOHmLvvO0h/SbdV0w/eptQeK79CGmWcu/HBscbx7w4GJnCwfwP8MT8N39CW/gzPjmyMMIDXuE/KB+N5GwW/wKcrTbcYc1f79ZghJftPxDJqYclGxnFsWBHBAmk4km8FVGWVYR4zvNZxEbPrvTqgVM4HKetvYFMFBRokRukKR8KJZl+iol+3LUjBJXjvtQZtMHzEhhPGqqphl/OOoqpX+VGbQ37iJWK5ZvXX5QVnbPtZnYaknx2psiWreybvDRsVr4IE7E2JrSytFzDm5avQykaL83yW70Gjd93E9Bixqc3SaR3un7D09D0S+cb3kg5/Qeveqo/UCcezX8/JyMcilK24GYLOjbmwylwrY2OLKIHLvTCF/iXELczRkD6DTpU8x8iF/IQyfEahBpfPCZKYs8r/RLgpHRy35oICNbekO0bSkU1acMDXA83mfe9GX8IvZgkkIYjS46Kvoj7XjbrZDKoWIxbvsHcyguqX9oVtNX0Njgk/U1XyrV9L8jkGmxavsnzsGn+lB5pfsGptxWk6C3foJEZnoaJchSm7ZEoB1KTv1p5xBTrbVm5yGe9ZncvMHf5Kbkmn2vo/f10TWobwgFukEgjuGCVthMZ4OdaHeVYkj04QcupBW2tjtCS0sf8siZnhZEH9Ep6IAd+euyo3BgIbQ2Ou/ixAuPDriSeAYMdv7jiqIxu2yfjN9ygNVLW7mJyKwYU4VI562F/p6Epl843fKjlkRIiqLLe4cinbNpM2weQ0a6hyBd5FI5GS5/QwKwmF/kUBHFQLOyHXOSLZJGef/962Wm9h2LfsN3SfaoytrR3vuPTq02D59R/TeqH+St3okGR0D+Y042aLq0XFSOVZcfP/2gNPij1fjvK8UM0wrnT4v2PQSvkkJYBCICrq0D9ILc1N+sknEtCSni050WFfvx8iCmdxnJ2HyM2RoR6tFKFgEukiEJWwzU43C8j8SiyyGX0xDROpDKWfLN8Fq/S8H4bGkSvwppZKVyJzDBpKG2E2HS+4UMtN01NsMlLw6HK18HC9mlNabmGN1fuhYEpGoy5yVdBJndo+lX2k7XPW8HMHUErt/rSsG6578i03ianLn9D9tO5wqpMrsGhyvdqRwJNXhoOVb7JqcqPAtrM5j/X2MXhMkLj/MY5KGVYuc33yD+Q32xPKvMPjOy8v5Crs7QZ5QX0KtW4KQSlWKPjxVSN7FiLODkwYp+kCoNzYjoTMNLZSjlo4vvfzHPH5epy6NlBBwZde1M/H/FDcVYd4cBUFWRKUozletU10I/lnp9KqRxsobgcgVGseSkIYVEbQRPX7emGUU6VmIqo3+RSyzz1F2EqXPUeRvvF3iE/FUVK2CMsRxnQZD81WE65ktjf2InkNMgf0YO3gp+CkZnQ2+iGKZ+ipcK03jnIF9mUA9k124e2FVPO+a91y7wP19igl/gPQC6KRf4BilCXCBc6NREDIekbm9/ASUefp33m/QvyNDE3SH6NjmeYSu8jORPAs1ro6wXqM6NCGK69MTLzDRF68BAymRH1zuVg7Y7OEpXEEZgqRvqqCYUmhw5NztkDSL6IHx41OgJ7gVYWQb8T4Wm6IZZ7McXVz6MFWipA9rTGinY0o38kLLBbM/xZehi/l13RH1au6kd957Mbbp+wo46Iz+QNQ353d7fr6upynR2dbhz2D/b0VPbnMOSrzthm6T1M/T17pb4m1+Aw9Y+GjMkziAKbp1IF5rmtsXG+05lE/kGnfWXfmSzAtJ+QeR+U00H5pvjcJJAIziI5D/0TD0qonpXBkmrjddJC84z+HJiZVh5B1g6ER5V0is65vex0eYQbb0qE8dPhVSapVLwe2WWCyY467SLxSJci6oPwyJY5yo90RmdJBMARnJt83z+5yQv6M1Y8F315VfDEc17pFp//W657+kK3BTpf9qFXuE33/od77NZvud5DvWqWYdpH1Baz+Ih8mPLC8RyZpAh727Coqa+OIerBJvIqqezbPAX0I0LLSUN5GUn4PZ84SNAYNHLhDNiDXa3H+ydboyNsmbdoOeqkoiCXNTj6XQkQAUEga3JUlEdPpZM2ozTGtVxGROqc2vhITTMojl1JhkvzwI5z6cw1Ny33ZjRmQM1va++CMfxNyEFpuVtaoJYF5i5Z6c675suu53CSqhND6akf/Y174s4fJQtKrMICfYcPugG5uur9g/gJm5nB/Ba/AL8CKJ4AU1f8h9DH87uaf1C/oP5BlKBT9/O/EpqaKhe16pqaQHpdeD6eYysksS9HnjpZQjAb7u97Y0RA1yhvIwCPQs8vUthgxbmnf74cvPLkBenknBy4Pzdn/TFfzB/myz51Im0IRW5GvtGV5Ul7mV0MHuP2mXfKhRUOjiOsF9fWZi07x7W3t49p+6Dx9duPsSJ+AbSc/5yDuqoW4sj1a2uEjKA53/nElNLLzI34OeP1T+UJlfcHIkf4fb1CGdOpJD/nmY3ydq4T6J1ywRoaFEBIlVh7I7nGYsk1OPLXet+b8RFmJgaQFr7CWrXW3lg/UyWEroNqYhMVQWWhmpIqYFmebRez1zFsn9a2Dt+6StDSqmU2NivGzRiwD60SzTVrbwVMrcmFPN6sZAnX2nx2BHgCyWR1KVa5NTlGF0FxljF/lO9FtMcRE31ekDLW3qxU6CBJHXGCCx5bcYPGUwG9YslKIbNRfgikt2fSYwb3vVIyIku8tEe98SDDp/aG47QcTzLLssYTIzI+78C/WqnevBZuO5JAUDVpJiddV8CaLuITD3rfGyM3uewqa3B0HKyIbkTVr8AhVZ4ZszU4ER3Ta03e0UTVepwtAD8drK3B1aRP8yu7hNJ8KymNHJklaq03U4l765X2EEOkx4O3znlLWl07TgbueXbAHerzmQRp+hL3xtHxxKuZ/fhxZjPqMX+hRJV4NE+FgGdu8X2v4nV4bSBKVfxHUG780k88A024R+XH8hovLkAZeRMnubHPoxd+dq4d4SyVfNLr/SsaCbIx8Tm4YtyKNCnTPPLjfJzn1PyxHJBUSgng96vhrIU/fQMoLpFIw1Rf4abuuoMtak3gyEngZXnSHmPNPjpUZk5ocSuPb3EnHdfiFk3340cHUWq8jDX7NDA/MBfbMAc5D3lnms5Pwgb9gZ//9AO8q4P+gfOWP+0J3a+Gm/8QfpDqeE7yt/ONm/A0IpDXVVlsvpQwgfMoZoUsg1J2rg00LCKaTMYXHQlRXIffWEwQ7+cLa+EFEN6jI5Gcl2trKHYEjqory8WMpX38qIoGhnMv7h90D24adBO6nFu/PRx1OFsxunL8ZI4f+b4DZr7MQz8fSchYIrSkMGdszH8k1uI9na3VGVtaHvGq/FDA6LEmF996QYfGZFAQUBKn0rqR3GhT7RzZCFiReNeEUCtFmYSLMZ61F/n0DBlypVc1BKvUloRi7Yx8c99lOcw2Vu0Tj7Z7N9gtq3Ge7JXjo+b4YATHA4FeKdV3TIYWTK/VcaSFyeZ/GhpNdJCxjBRM8xlOMjs+ITbk0UpzMqGUg8bf3xJB5kuFCrkVMSloNZGPySDr1VQbWiP1iMEbqG0whnxac6Y8a2m1+sry2v1wrNvHt74qONbbP9z2peY75ydnI9fpZFZCvs5OhfXmvfkHg+Y/6vFZufERSmCG2uHkeB4MrbCRoApQAyZ97xujMDlX5jkzyQCFHFviwu+3li+58PCMsvScOeCTc/CYj/ya4nq1lPVRJ62FkJSGW73KjxLUJamEpR1ogQbGQX9fr9oqYzvQ34v5henZgBxhH6t0mJWcedyG89Pmq6zBS5nOX1JqSs53lYCt9w+Rn6G/gW1VDjmb5AcvY03pTHYoz6sJ5Q+euB/ecCD8oYS4p5D762w/hCLT86lnRanxAarXVQ7bJ+SfQNTNIwKPBhq5KUTtEa70sSzWKUn0p5gSL+2h40BGQsZ4eO7xX7pxGbfK8YmHLat/hfekYb26HE8yK6vNJ5218ZZzlnNTIzqF3Nefzm+W82fzPcSz/IX4DvoP6cNYRqP8bZOnzfyYeErxtuqPJQIT70kPGvxIQzzjTz0sy83zelrQi5dOQaMPIX2uyE7JqMff0mp3pqMqqU2hbc33F4HLtzoheOfOnSYebUimoeKUzbQrkE18qPLIy0R+k02985Angv3mCui9bu26KCsv+UuXLXVnn/MStz6QzUqGKv/Anu3u8M5n3LRZc133uHGuq7Xf9e3d7Dbc/mW35p7r5GWQw5FvBljm9TabDFVfkxfyFzn+supL22PQHwi0F3TOc59+wmCFD4l6TGmM1+jTMMEvck2Lxvh9JEcm9YsIuRCtYV8iL+QajPyu+c8kpKenMuqJlY9S1UvXh+ql4zU3jeCMz7x3LZxlI58uv+Jyt3TZskIqpuwiEp3F6JS9LFe9eVay+r6fu1987n3u8L2fcnO2fdfd9Nm3uYdu+obr7U090DqMjrj8iiv0e7HDkFGNtcjxV63OMJ9egLOz0XluEZ3N90b5En5F3IHWWo+ffPoWElGS61/Y8Wtf6l2B45xYEwuZYqjVeK/tPWx4Tp2mz8IZvTGp54/X3MK1N+WzrdUf4JF3Zx7LzQAjgbOOMBVRf97y85aXtneR8kPZ3B++vXsOHXI9eOMIHdvBg4dSFQxfflJgHvJCeyel52GP5ucPdWC7mGrDynnNWz3Yntp81fyKrUJU4ycfPIz6Yt65zAjO1twURqWeKolLm7hmwWgPPyaFVNo6wvYrcSqonp1fx47P5fXp2JBPy1Qm8xX3mvtzdatRTUZdNMW4ahDj+ZRbvQbzlh/LK0b/0Sbf7DxS/Xu02ye2x5EbH6xZa1dYHU/Oc53/8Vob+9R4s+WZf1GfAxrxcsaTzS+RnF1VJYl5xPh+E/OwWspyq16ir0QUhdIo8ovpbU+hytO1N+Yk5et9b0mONA1xOU/3ZJTFZJIM+uKK/LLcLKPQ7JGGRpXON7wsL+3HNfhW/yiWOqtqo0NtZZGczXPDWaqHk9r85l/S/ik+/a3kx5qcv5+F0ZjooVVxm4VbrnpQKOYjOPXAqqqI8dzpfCpjERzp1LPX44s9teqlV20o244MWme5LS1QWmAkLaDfUtB5LGvyVeZ92g8YbvOfkMFK7KwslKoNI/8jER1bXkkvbyERo0QRWGVcRN/Ih/WZ6Ln9joKAzxcoyIifKNnW3izuij25eeBqkHWLBC9fgRwRUtFkgqBESguUFijMAvQHfMmHzWODkc/J8AOqjM5zo09Dc1XmJ6rBOLKLrx0kI0qs+tdeg7O4iVXix3+//qYeFOUSyfly0d72Q6j3uNBbq+euhCJcvDD5bA3O1t4YZcb33LA8Icdb1AxrR4NRj+toiI5u+bVHBecnj32GHlQgvZjAfUFUfrTi0gq2I9We4eKRXN3JXf5w9RsGv0ZydkalER3npnmO5LyWUYEN7as/nccZ/KJTTKf0xm/+wfwP6hO/5HHUb/IJ21t9JJY+xzVxhEwSgYnztUjL51c8e5osF17e/5bKNjaDKs22RqyRn2FWSmh8CpXC6rBocdTjvsH5t0cFF2afSG+rZ5T0T6R3zvpGckeZPfzEqzX+NJLDo1N+MFlE5psswJy6b31YFPBpZWl+OstkIp1XjHveEdgJZlhm9fqrq/R3Ki6EKhyV8N+vvRmUTCEwJSohnbFVpB5bPb3yhvTcr/zRbklPX0kT8+keVQolC+4zKvJZiOQPZJV8WlyWl/bTcWLjIQ3r2SdNn8br8R/V5V651OwJ57tSZNOlZ2vIRzPRf+j8bIzf/JNAYUEkR8+nflG3tvZmHlHW4KTIUzW4BidPLwR85qEN+n4GULkxjhwLMZAZHyEq6WIer5vPMMoI+p0IT9OV5WKR0j46MCrsMNzxkR5vaXy48o8of4W1pHU2zw3aPLeAwvA0NPo0JJ2GYdn1mZysNTp+3zr4o350f/4HoJ4RNIlIzmhS9EQpDS1JRmDJc2SuqUV1SF0xTm0GsJBZkz91zq2ysPUWPGag2LOIdqlgG3C526swvTnuirCHl1uU3kXJPSrGu/kCtaHORctLnonJs/HmWwRKb7JH/S/Gw4iO+/xpc0lr/sLoDTc/pWt0lEu/1c44ztQjS+QRGU2J01TPGZ/72lUMpTb6GEuuv1kkZuUKzRtbrq69EUuXZPIHkV4ozyLAYwZ68+TfHm81b+zc5Remtx+Lvv9Hjd6j1R4N2Zl9Es7acD98gsnyDdrBKsb9qBRg894iOm9CqYuBUJzIH8uI/ZRSEG+Zv/gEcJCIjB7KKznDbzDQsQXlRhdARgNUiB5XFQvptcJIvqGen5RMbJi9YVRzGtu24KtLfPknPT37hbpwAkQaGF5AOR++Zr3r163Lvf4lkM2H0aP25Kj/suXL3FrIlh7P2T5LlkJv2gPdl7f8ZcuXurVr1hbSv5HeZo+c9Kdcjsu1a2DvnMdnkeOvkf4bOHwoOtuL57f0ulkvAc0/EJI+mKUJumr+xvhYrge5SMtMfkZycHInkipKdnSMMhrYoapDTUOpL1EXRk1LG99Cko4wE1QlUlqgtEABFuA7+eRNJMOQbcslQxGRjOqyJbSTSFyUuDpGUrzzWBMX8XgfHV+a6XNA7eklQyMvbIHxAf8WvAOOr0JmofKonzVva/45zmXkZt484o/YfQloRBwizEE8QsKnSDTYZPmAaxtEFEcebvVQGUGJ6MivAqJ8oyvLYcPSPuX4GOL84NgxR6NxWdI/qL+w+cc3Bqt/4PdabL5zFlugpJQxfRonP+l1Pqs/0cfKsv0Nn8eXSG6o0ZQphhqbSkOtL6qEjixIZSQXGKPcLS0wghaQSM5flJRq5YA5dAWGGtWZo82qWd8n598fRwK7iqo+UnI8H70nk0JTRs+RmReWV8PV65PH+Awqv/FlQ+VGGY8eck7voTes6VRC2o9mKmFph2LHQTzGeDbHWcw/3ROQ8AuV+Tb/FSp/JR8lqlSFMW78qoflJ2HLgiUrjFtlN7A9IhFcKnoL1SwjudAa5X5pgZGzQEUkF1Y9jKjOnGcorpF9c7EhbbuuufFlJFiLi9bg4qupZIpPDm0NTv2inVPb58gomCUxfYyLb2UEhnLS21VUoY83yp/CJRNrb7zBGDEgttDX41ygi704NWDtFOCTrdEZXpbDEqV94uGA8ZKYjOX4aWp8yFjSOciLf4ys4vmvtoxxlZyFmz/QNTftHeXO9ifWf7rGp/6EeRzZcgnSVyKupJlIbsQjuBrRmzWSsIzkQmuU+6UFRs4CNSO5UI3EgSQsqL2fR0TXOrQ1OCpm0QCh/Sxf8XBr584xrfFkQ435eITAub4YKKATnGsAPg+47HlD0jAlTrPRCgpLe5T2KGY86BjTuSijTcac4fa+OZ2RleVKJ6Mz4LMnpliqfyYvSW98MTQ/o23V/IbW5IYSwQ3rCmqDEZxaBafTvBm4vE/OD5ISlBYYOQs0HMmZSv7Aa2gz0Jx0Uzxwkn5NLr7zhL4vPBfm/SwsZT7X0uwcOE0X4lRC739Tv9sGCf2QQH6hw0budxPJkO9x3vwm+QMKufbGNTh92F+IhHgQdC12s1zFmhxrL1NpgdICI2IBcVqc1dnJ1tpCf2BrcqGfoYQQNz8ja3Q29X0V0dQHLnxWDih+xvsbo4vfJ2cCAsgITm/s9ZkAdpEhVJSlhvNiRFaio2OSLTYWHUY4IzHJVyLJx26rw5d+JcWF4uACYkaNw4ocfQ1DAfy8n31Pcyj8tXhK2Unr0B5MRdh7NMsuwh5Jy9fAON/lzvxsGvMHBm1eCzUcpOFpaH5GoBX6KhhyWZZAbAyanxHoieBZ6AuZFGrMBsyHlXaOmywnbeWP7Q2/oJ1Fo/KTvMyz+96kPqk7ueYmbx6wfFEVmwiS/8j83veB97vL8H3UIuqnbD73mLdsyixadt46U57pXZTsy/B91CJkU25Rsoscf43YAgYLfIH5EctL47bWpvNdpm/Kj6AkkBfvmx+if6lGQ4eQLiOfvE+OqnhfCI/o/3xEln4LgEVgyhNvLZIyD2yeO6bQPe9c42xGYTEmj3pUUBqBQGw81DcOEIcMr28gakR2qUpRkaTKVvl5NoamKl42a8g3iZ0hsoi+LlS2N0Mhent7FCG7kd6ztXA6RE3pfk/i5hdifVEe8eq4zKrX+My/kCauM+ZI1qaPjkXPrlJFEgxnDY4K2Lm0yROITdU1OPhevJxJ1t5sDY4wekBV1tzoxESI5HNNTu6PY7CH/FYYST143NiR2mP77IiXd50qO7szh1MXx1TxsllDvknsDJFZg3u4NRUq2ytXiN7eHkXIbsSmeubF6ApTsQGGcI2OjsvW6shKfpGDjUzxDLz6Gh1OYcHkXYP6GyBco5P3yVkFjKmGuwZnntYaLBAbi9cE5zuefKUCsW9rbwalyb5QgzQg/MfaXYj7zMTRnR0eHyl0UhSFm/5FyKdsbSuh1TT89kT9LfbEwMjRXqZmnvqafpRpVihEvtg7X3vQ1kzal6q9tUdLhtefRdqjEf14ppd2cGxftWQRWRoafQt50aioXSwIcPEvVuiZGODIyDA6gYpwbQ6nq6qiyEY+z3nVUQGRZAoT13hJSyAWO/TkqnBlucr2YkRtPqcAncUIyi8dHraC5KqSMUY4GyL1wSXGDQOx/JueypY2dFG41VqEfMq28ZK7fC/b5Bo0ow8VL0xfCKZOxdtbaxhq+6vaT+xt2rNf433yDBU3KUPlr6pvw/pRA/YN5jUcAuen+QeVbRqqf7D61I1pn5JP+bnyzjM7pir0vsTKGQkqdXX/47/xoA6HxG0V95upyiIJFRtmR1LzyOlywxX6LWRrA+JckxPnYI+npmFCpUZnEgJNpL1WHrKNxD7twbqLqF9lx23Pqz08OBUvmzXkm8TOEFmIrdmHRcn2ZihEb69zEbK92jWBXufk+FeycA1fHW84DsJ90sfzJub3NOK8MugT2uDmMmNEvjjKVDnRdj0n1iNk1TU1CsCPVZr7IV9EjxJ9zxsh6EAU43quPIDMFn//G+97Y0xna3DEueZm97+F0AtDGY4QEhrrfXOGUyNGhtoCKDjCifZgZ6aPpHmoobJVfh7yTAYHQ/GyWUO+SewMkYXYWsZQQbK9GQrR29ujCNmN9J7MO9hOIjA4HFtjY++bv5CYJfRXVgga0uuafAzNf7T6NTYZrPQfgoPZOxniXHMLy81fhLCVkRu9r0ZwXJNjrMWjGrWqhKStoEfj6KjozoUvgSMfD/63tuDs2CDKiZNe8gGlLjEEJHjIl3VKfYTgZT5xgR6XIxgy7Eg24hCaMxVXb0HyVWwBehekrw4KGZWsoTh7y+DLX35R9i5Krtm7HmSPgIbzknNY56f6CAYlgmOusiz6iUzFhc/4PTQ/Qb8hHgX5kCz1ELLvDae/agNdG/wJfYT5k5Cu1e5rU1tZRGRxUYyzHLKj++B4lYMuVCm5zxTjmqMeHode/GM1jh7fQ3G/XgbzPbvIoGeWHGxIHxVLPmVpuUIizAMk90hDqbXIerWC3NtVmN4F6Wv9WpjeBY+fovQuSq7Zux6Umaq246zkn0Iq5ue75CnOPP1l4+YfGOEJP+m9DsRFPnCWhjj3SSf30Um54qRs18hNOLChh9SkMMDp4ZD0ogRhSKf7Ffz05L7IJNE3R0niWGCWJRCUdvUVRbEEdbJCnKKn99UjO5seXh0rHo9UEfvkWx9le7Pn2j6IFZNTNu1GB5qX/YrQ1/QTfak8Ul760hKRfC/XcJk4QflQcdFXZOtenvKLHH+NtJfzGqOHDUOyWc49xW3NTMeF2lqKfHm8n6Q3vyH8FIYxGskHbvIFKiKZ4ZMOdHAsarerqSrCmpWErD5zDQ4ihA+bRtfgeK5sa252bm04oZT7+98YcjIWlNBUa4ImlZom1+RYDioxiuwVimttxdRH2daM3NvjZZtcg2rfobenMH0hmLKLt7fWkJc9TOO4L/OVX6Q9ZOJ4i1ezBx0JO0amLscUfrqmpo4oveZGeolt6H2E2CDlcP4rbu+NlDvwvFBdozO6bEg+8yuEXOuXNTlKVh9cCXnOzJ+t1QmEW1bH4+kNN2jnxgaRb2twUhcbwtZ4iGIog3rCNTjgzJdzeilHXVUhy1BIqSMNpdYi69UKcm9XYXoXpK/1a2F6Fzx+itK7KLlm73pQ5rH3A9jnHyeqQGyrrblxvsuE9vQ8Zwtx8xfif7wf0TW6eE2Oc4J+KIRcm7M1OkLKwRMPkB24VMXpZKkg1+DCr2+J36ZaUk4+0oX8DMJaIUSgjBtseAhWpqrQJNlbR0hvRwRUIu2nmCgzLY9ESHbEGSnIb5cWVS8fvJY2F9Cu4vTWB+iLsD/tUZTe/JYrdS5G77UyRooYJ0XZo2E7SMtkYnKUyizUqal+ocI/wMY8BbUnqyodgojRCW/S2C/Iply5igskDvpQDyeJ9wfMN2L6j37yLVxyEvkrkkUOFQW1MrzXryTJrELIhlQPOBN8cqUWp7ZoLPMNYoeEEW75Bsvy0j7l+Bje/BgYgBvhxUQkzquhpCHx1a0r1kVemhk4P3GCojA22ffBwZHAXYZrcHSrIc4QkmtpctEA7jRcc4vuhwMFvXwUmRFDCBve/4ZCaEFla8OW1g5xZtS7TKUFSguMnAUG+g8jvEJ8hXme9exoHFlpuZ2pyVq79xv0H5FfqOIvbG2ekPT0G6wv9B/iJ5DPcl6l5aku60s8u0rT2NUQM5NdTWXwqf8Z0K6GapGw0tFpYgO4l4R0aJLt5YpwUvFcXZKWWr7BrHK21RLrCp18iZf2KMeDzQ7Or7zHAwRi7UumIDaEGr4oYvlSAgSr+6IM7si1LGWSXA1oMv1Fik+FqEOLKreACPXYXSO4e84FkRzV0XNfjeD0NpF6cZSsvaEWOVcOoG8tGhAoIsIUp2Oiacyz16Nno+RUFBwSKWLk6ikr5LXw6TTqX6bSAqUFRtICgwN9EsmJH8AU5NVU9SQMi9SfVHEB4hpCv0G62A9g3+M8SMn0BiS9SVb/wYgu5AMiEZ7xB28h0QgudhTp++CsJAFRs8Vd3pdHOKpQhal1wCSRWJAlp7RCnE0vzKT3TsxqZEM1eWEAagxbYxi9+ORpM9z8k87Xb1egnVuffdjteH6tO9zXL3bQNcXR275Sfx6gj43+0/lpszI+E+TslPnISeqnqN+NceTHfiMmUteofMJDYbJDetvVTOHnbo3KokiOnjhcg5N3paMnxEmKc6THjNfe5FlUw1H1kNfgfGQGLaGBaFsV0kHaml0UEpPPX3gA46hPS0670J35po+7/rYJUVs6EKiuu+Ef3EM3fR3LH+ypMpUWODoswEhOvviHcIr+QSKthL+AnjK1Y/9ha2qE4VqbnKFBAvMr1uhACQlRfsgn8rQUvkAqt0oFl9U0Oo/0fXCGS8QEZye+2qDd/2YQvknvh6HhqUgllOfRwvvgeB7v+QgZqaWh3DfHOshHeohlPQJZj9YmW9bIxLwwjSZ8XHe3W3Hpe11v6wTcusPbd/TXg7XdZZd/0E2eOn1Ut4/9Mpr6o9S3fn+JjTh3GWMByvw0vyCQ85dzVssJZa57aM+ahlCfU1c6ifXUMYh/oEZEpR4PI/+g3kzKI3/CmjUu4DNfdLcWKGZBLRd60MozZqAXN03AVAPKs2goJ2RVQuqh4QnIMvwieqP11QC12llzlJgfptGEt7W1uXGzTgjVj/b7YPjJsxdHJraC0dQ+6lzqaz2ncLTbQ1qBiart8FBw5tBPABpudDVwne/KpwdE+gtvJQMe2mBisfkJ+ifiJDGIJx4oim8fUaiCNUoSr4lShShBFKXPktFjK6UvFgAxFVA8qkRw5KcHVk8spJqlnhecFMl89czeYyOHebV+LGQ5k6k1WnFtRfXtaG9fqb/27Wgdn+n+k9YgU9vjoeDM8X4CuEV4Qmflxhfh9A86h9XPcF/9gNbjbaeVUbxmA5pfESgRncohibyFhJ6yf5A39dET46zaQ8PpJXkVlOfeA6Bjefx2EHpaSCIPISSEOOn6cXsz15KYT8i7naUOD9N4gh789M4816d4wjSu+rJuUYNboR2NOHW2NHOi9abljP72RWPEN6nEaYjRPF7pC6g/57fCEKe/EP9BSB8AOinHvE7QC86ITP1D5C88TuchY6UKjOhRh/gPT8c6oreQ4IkvGXbii2VuYSP/3pMiiuOinvfV9NF+mJqnjUvgfOGBde3MCwGtCJV8ZVSc+b5EvLbQ0ZtZLuuVFFFV4qhQWHyJ8UaolzV6cOfOmN/izlnY6p7dMeiuf5JuPUxmO8srcbOEwtIeI2cPRmmsDRsPOf8Nl/vhiPr74ujQSScv45B8oEYPPPIrft4LbuXi5QJ/IfyKy10b5A/9hadHJIdK8eNfdERJ4fSGsgYHEnrhyKOQhVweWj5x9dYxFDbPGu1n4AMI6yiuqR+Jj1D6/z71/7vLr7wi99q7cZs207TxuYt2S5ctc9SbMO9ksvOWS3m0M/UuIlH2Nb/7gSJEi9yiZBc1/poyBCa0zNoqUCM2TnaN+nSOKy7znLuoUPxCCqb9CPUiXQWkDPwievEjGvwgktPJpFtxsuJaI5w7oDHc4jOpxWd6EcKcOIcma8QpHLoxYT5Lvp/qFSd/o8loccVZjJTFR2ledFaxaDfc8kzBPnOo9d/1zIDbsb/Fbd5TSzsxeeHtq6XBUNtnNhsL/NbWLJhH+7PkWl4e8mv2P+crrp6Kh8Eu6+MmCb0EZIr/kEKlMz7RN8yP5Gim+BEr9yPeXEUERaSnt0xogheG2LkxFIErDHGL4BIe0p87Uwf1qOBhG5RdIj5dU9N8O8cmjf7ozW2fEOuByBAPDDFCT6giIZYaxbie1StOHn0TKAgkURGmGMoeK5ZUCXMpD+pL1zM0+Spl9bZBt/eQ7qflGj40+bEdSn5YctSNj1T/5T7+UvJr2Qf+oF/W2jjfdbbqXA7xeL6bP2A0ZxFd2h+EeEhPNWxNn00WtVin37dyhZpPepwUca3NTyTAyGMyz3DZVaLonJl5kgUO0mFjFJE84bM1NSCSjE559EY+K2NedXpS8SqNJXYFpTGS02Q7KRh49Uy64ZZHDU7Va/lNy7f2pGFe8lNymtav5E+Mo3r2s3FQDdbjr1deTa7l1+MfRjnnaxvfrUavI8PC1sdjPBIPqsh/RJlgwj8dpNnURhfxNH3CPwhP7E+E3vsHO8sjvahHV8g/Kipb4PTGROhVJZMSuM+UgiQV7x1AkngRCU8b5WNH+CBM8rzYWvv0pnqU0PfcURVJZEqkdMbowPvx2prDezcnWmJIG3z7gV1bPDo62mO6xwPGckr9zRIKR689xHNgIsf+AjnApUXYEJofIBLiMv9Jm5GfphMaZKb9DO3HMpFNyN0AJ72/MEJvSP/pt8i1+1SEwFxrFSj3tcEB0Tnb/SoiDZsIct/jpBE61MhzdKGR2j19xr7Rm4cmHqVgV/PSGaMDP3iwx62//euuG49xhakDF7433/NNt3v7Cz57dLQnbkOpb2wL7h079mBLbN6zWTK3A/9h5dJibELc+AzSj6TLI5y8+Ikf8JD0Yk0C/FiewIHQv+DNwFyTUwcl3hC3iQzi+6h8doyhIssJyU8HGT1TBowUzGW0J/JZC87RedMwg1a94cToQIrEfL0hAqUMLT29lnIrtVRCeGQ6uOjZVfBp6Ap6YTFIGqUVly48xE1kzuVUWRTIp/4n7/yh2731WTf/lAvdRZdc6h55+GH36EO3uY2P3eIO9+L5rqg9tDXqjPDm2qdq03AUk6N9VKJsh6OfHMzS7RM7m77Da39aftSHkT3yk6+yRXDQXznJj+ydz/iLx1Nj+rGL+LO+RqyFXTqr5PyHNJ2mqfxo/kMIxVTyJf2H0cvX/0BNenLFyXCFXNOTNTlxAKSCzyGb8igjHZwly1F6jcaSFYDSnxN7ScxQcdGeKeRhRJ+sxeTSkVFdS+rYUBrxoZkiChsTaQ3y0KK/osq14nzq7+/vd5tW3y+/1798vnvq1q+5dWv967Mr2qMNLrp9zcoPOkK6rVn+mD7VPt+BVcuH1f9kTtVXYW8dhc3Wb3LpQJia5Y/ps+tX+ZCt4nOXX6t+VinV+rZ5J2K5Am29TdUzf+ChzeOIX6nk+CbNNXpBUJn3RwZZOxyEukjQRAv0KofP4GNNjhQSzwmxnVuLSO9dxFMzI8C5y3w7R+a+/JAfXh2J8lkuZRrJcT/8xVdTeSzQn9EDlXoIQx7DTS8tJRGpmDwsGrd6DBZd39Eu3+xg8GjXt2j9zA4G867P5BrMW34NeSySH2cb9wE5/80vGGR+WF7BR17Px7stqpUrjZdFetKabO5wP/gR1zcDwzlavKYnpixCUmdoB6AIt3NhJfFEwqCbyCn7vNAXR0eFgJ67oRTZTwmxNbiQzvgi521SIl5PXTRu9Rosur6jXb7ZweDRrm/R+pkdDOZdn8k1mLf8GvKiIpuMnMs6gZkDjYD4aWjRVoJHiYQ2TU9cokDPb0SCeodm/sSgLL0YoYeyJjcga3CqEOOs7DU49ZDc0lNLRdQ2WoPT8vicOsZ1DQ48AX2sB7UNW+FxuGzS2xpcTXphUe8vVVA/ipR8ytA1Jx4Fci8XxVhRAfVLAyA5d/1VXwhW7XOUr0Y3+RAvfZiP/U222SPP/jXZhDZO8pKvsrFN2TkX+UWOP3Zjnf6jrcReIBVy2g/z2aYf/UOIZ/kHlkfJ+xPaisnoo3JfS4Sn6KlFGFQRb+falr0FWIVaTMcKNEccBnaJx2thUoiMDHorEp64XLIDeiULGsiMVHlFfV4r5RUGUUya5kWZvkZqXt7yDeZVLgpAmMk1OGz5XkD++ktPQm01WL7yvWzqruJRjdWjvTZU+8R2NsEmLw/5lKG/oepnfAat/WaItB2sPJ2f5q9Xnta7Wf568muVm9X8TBQbam/4VqfmM3NjB6ZcRk8smv9shPg5dXNS5nHZt43JDxpt8pUEIVvWGpwKB4k6U/HUxkB6RnLmwUkS7TMfuJWzQXJO7kUJLctTuPAgj5OOCqoMbiMVTBWBJsfKlZLEfm+koWmXd71Fyc1bz7S8ovQuSq7pX5T8ouQWrbfJrwFZJD8//TgDZf4HOMtl7YwQiPmHBJ/JEZpYJuNAoWM5ZVK+h4aHeSI/KMeua1m07GTS1E3mzesSeoJkyNgAV+SJG6C1OjwPo7hEyNu4iJKytEBpgWFYoIWvaBNH1JAbSdSUjLh8UQ0xmfQJiUnE6Nt5HwnX4JhBR6bBoboo1kecFPqVaoaQ8KMIERliWnnoYIyfpZTX0JoapdFdSyJfrI/V4gsBtFbi2gjiekosJV5UpF+Ji2lLe/iRU46HXMcD53c0dTET4/nPGRrj5l9sjU5LuY3ns+Ylcbsfbqj01KehSK6ZKK7pCI7aNxnFpfWhE6Y5y1RaoLTAyFrAIjmr1aInwzMh/ZhPsjgV4JZfC9aqIy2KtPIAET0x/UwWjIIsFJpzoSC6lDSkYqJ0IMzoWGZuKFQkyoN83iYSlpEnTCbLGqmRoteCT2pgN6i6xEt7lOMBk6bIeWFzkZXofKz0C36GRlOZeKxUTG8EUu6RcM6Lf0A9WeUkN1ruUy/Rh/m11uTMqZGpZvK1NkxvwuiRmkjV5KM5aHhzspqotiQtLVBaoIoF0pGckUXOL8qwnWxYQZ9NFuWm6UPHFxH5nfaWVjz9TQpzgwG0I0CyMC3C8wJEFYXhVAZ5OiuoMllVSi/qQz1jeu4hIV+8tkB6ceIlLO1QjoOi5wHX5zktE5OOuJ+a3JWUwhmP2RUAEcBldQoiXQ0odYnA5CYlPqFPe1tHt5dqTFbL0Y3HjVJTmbaxlSxndLTHtC31L/tLZ7mNiKPdHlzxCl3P0acv/CcUNB0FlnhpDz/ByvGgE7icHzogRul40Dc40fkyCcQmwOVqaYBLYYCX5Ul7lfZJ2qMcH0l7lOMjaY+RGB/tXMCz82P1dHr1AqpI0lI9f45zYj9YlqsFpLMii5X2KcdPPFs4QsrxEY6IkZ0f7YzaWvgaD+rAcFRwhdpNZbnZR78CHtvJ7GN2q4BG4O2aRzlFDfTzhmwTXvaP9Y/ZF3cTlfYpx0c0Qdqmz5z7sci7RdmpUWKjZwyWd3d3Ofl1deCDHXi2AjOoDSf59lu4cL7k9x/ujfKsbLhQZbe4UHYHlBgHnTo7u1xHR4fr7+uTe4ISs7qB/rrsiivET+7csRO9mm9/X3bFZW792vXRaMlL/tJlS92qs89269fxJaLBLM5Bf34vdtVLIHvtutztsXTZEuj9EuhN2Uz52fuyKy7HnQSDbueOXSo6Z/kqND99j4Q8ieTkbZocM9YWi+xUI+SjcIyVd3V3uk58XGHfnt3uRfwOHeqVz6GZSQzu3LHd9fb2ojzx7UArHhak7AMHDji+LTidOjs73fjx4930mTPxSbhWd+DgwYb7b+nSZY6O6F8/j0kn/Zpf/9IRceLdeMONsco5jZ8lSyn7Mnfj9TekfNzw9V8CvZcuXQK9obbpay0wfIjzg/ZguvF6bEJ7Sy42w5Cv9nBu3br1Dfd/VF8O9YuIYeg/EvxykwvXDPQ/BXmjlfxXgcdo+fgJ4/B6ln733IZn3dYtWxw/MMPvNx5NiY51165d7tn16+CIt7vx47qiA1HUn7X6B42J6PLsfx21Om5q1c8h1WS5CA31bpK/or0jyR/qbfbOo/7Q3ibXYB7yj4H5L0/a26KoXekYy/iECePd4YP73aZNGwqJzmRM5rjpx/rc9he3ux3bNrsJ43DPowQ1DBe4qxHOiPanr7mI+tWL+3YdqfYdafum6y/Q3kdk/KTblwMeR3Lw/okjHYyXxI/98o7ODjfQ1+s2b37hqIvcZCzX2Ozdu8/t3rENEd047bcj1X+iIw7/BdSfiOQKkJ8c76Nk/HtLq7bBGVdpn8h/BZEc/ba4TYUwUhI/9su74eS2bhl9Dk7GOTY7cfo60HfIdbR3SNYR6T9fM0He9deO5I798Zm0ZxzRql3GaPujSK96++U+ORmXttGDsGF28Dzm8a6uLrd/327X09MTt9Xv8bnY8V3tbiJ+7XhXfF//oNvbc9gd7K28IFDBHMhob8d1HnQKTzGzLiZU42V+a2sr6m7D0Yn8fYg00x2l3Ntf3OZmz5nvDvfhG61MaTLgErHIFntctwlTCs3iD8nT5aFsoRumvKR8CmMNgdBgd3j1qdy87UFVTV+BuelrvUCBqvvw2u/l5a3fUSBPv9YlgwazbwzDzo52t3PbHt/TMehob3XHTRnvLjhxlnvZ8ulu2vh2t33fYffL1dvdXWtedAdxZbM3Js/cmzJrqjvpNWe5GafPdW3dHW73+u1u0+2r3YY7V8Nh1naUbbhlZN4Zi92iS1a4Kctnu8G+frfj0c3u6Z8+5LZv2FpR30FcZW1tGcCPLx7lxZLKfmWOxQESHeTY7yrPpHOEV9Y/9HEW652vXNWTmuZtD5MYwqG3v5o9TXq18rGdj6910QBMYxwioknfBsIIbsXxU937Ll7srjh5mpsoZ4E6YF5x8lR33SNT3bfv2+ae2FT99pH5Zyx1L//461zbtE41M7ZTTj/OLX39ae6JL93p7vvKLVUdHaO3lW88153xBxe7w4N9Ef+0s+e6E966yt32kWvdutuejPK5w0hk//79ji9eOHyYTq6yXzVHez7v/jd5BrPqV4Ur9Wo03/RvlL5ROsotQm/T12Cj+jRDV4TezdRfRD/nVb88u2pHsLENBytOISeN73KvOXMOHNxUODidAmb4SfBZrzlthrv0pBluAqKzrMRT4HP/6IqEgzO6Prwb/+T3nOcWnneCZVXAWSfOrXBwRjSA+l/6J69043ChIZ0O9x7Cqa3eAulXKiRCCfvXjv3VyoeTT32Gwx/qGcrRdjInf/lF2qMIfc0u1JvJ8BJWjo9WHgH0dpqxCzlE+K2LdFo5f4p7yaLJcHA6kNLlkzpb3DmLJrkTjpuYLhJ84fknuIk4xa2W6OgWXHCCa8NaWzoxilxw4fJEBJem6ZzR7ZZfuTKdrVeGoXKtfpWYBX67iP5n8FiU3KL0LkpuEXYI+5V6F2XvsJ6i21GkfERySNiUsMJXuFk4P+UanIyiymLJn4Hy6RM65aWdaZJpS2a7/gznGdJNXjIDTk4/xBPm0/FNXDg1zKrY5+fapi6emVl3vf4UYTn3+7jx3W7axAmuGyu9UyZPdHxqpJ4ezZYXobcqCck522Mk5BVlj2b75WimRySHpAeDEsqIiTe8itpf5SqmUfWhnHRZqR+PgmnwnFWqef24SssjZjpxba3vULwOly43vB9XeCuuCKKwXr8Kf479fu7SWe5Lvz7XfeGcfe6iJz7vbnrLLPeXl8xzEyciys2xnrz1NjsVJdfkFwVHq95F2SNLbtv0Wcd/bCSOOEezp+d9HV14TnXXTj6sHifeN3fK3MluMU4LNeSNy7jXj2f27n52r7vh8W1u2+4DyUJgA4f63YlvOAufdBTTV5QzY9N/P+k23r+uooyOa/KMKW72uYsqyiyjraXNPfKvt7ndL+ywLIHd3d2uexye3MDD+1l234l2PrNuPZ53XJdZ3ux4mDBxvPvslTPcoo79MApuXfG/EyYedlOmTHV3btqHL9FhOQDKZOnTaD71pd7Ufzhysurjw/O8z1DGwDD1TMun3KL0Frm7dhaid7odoxVvmzYTTk4mIYcNJ+MYhHAo3V2deBY06eR27D/sJo/vdCvmTMQ9cq0JR8fgbcOuPvftu553dzy9LTOaOrT7oDxEP+3UOeJ80pv+Hb3uV5/8b9ezv/LePNLuWrvNHX/GIteN+rPSC9c/7R77/j0VF0wm4JSxvb3b9cHJVetPfWtFPv199oLJ7i3LsK6I533TacHUTvftxw/gSi91GX59eeqd1mfnDh4s8h//lFuU3pRblN5p+4xWvG0aIzlz0bxTlX08BvFOOLl9e/ckHufiQ/lb9hxy/fh49fSJXfIqpcOYx/t7B9y67Yfdt+/Z7K7HPWv7erLvlCP/1oc24lGr8W7myrlRPNeGe9gOrN3p7vj4j922dZtp8MxEJ7X7qa1u8uypbvKi6eCnk3CuHREcI8A7PvnTitteWD59Ot5MAtIBOO+R6M9F0ye6qxZj7TLDyfW2dLpvPr5fb04ew+NL+qFs/4iMx7T/all60irMBE6e/I9go0nuxAkT3fZtzzk+A5pOfFLh1AXT3LlLp+MiQ4d7cV+vuwM3Az/1/K6KKCrNS5z8s0483s09a5FrgzPduX6r23DH6kwHlcXPW1Hmn7PUzThhDh7b6ndbHtvkNj+yEdGRf6ohYGJdCxYudnslOhyZfr1g+Uz3DxfjmVk895tO+1onuFd/9wXcu4dXQZXjDDYY2/PsSLS/ZenJcHI2F9Ij1PAxUN7W3uY6EYxsfPZZa3UF5G0dPBgzQMpa7K9gOAIZU6ZOdVOnz3b78R66KBXcfxcsmwUn1y1OrvPUS137wtNd7yPXu75Njzt1cpuT+kSK+Z2C9SvHN+xM31otHeP2b5cZy8azobXSMV7ON+y2dIxzkyZNQjS3N9MSdGx0cEdr4puCZ8yY5fYd4As0U4qm0Io2DKs8Zu5Ysgp27HZts5aIk9N6UJ7WJ61ALCJdEonILvC5JX9N84zl+a1PjHOAlFG068EtH9NmzpLTwKwH9WuPoiNbykfAjjtujuvFYpw8vC8h5wj1axAm9D56o2ubsdAdXn9/YBAMrpHUpxzP5XwO/BnW5M6qdwwMBuuxv8toqLOj1W3FO+X4sHve6e2/+eq8RcJ/tOJWjSmutb3T9RbwGvZ6Ci+f0ube3Lk6c02ut2uK++zOxQ2vP9arayyUb3xuq7v7vsfHQlNHpI1lJBd4fIb0vLcMlwrwuqK5bs/uHfjtaejiQqO9tXDhXDdv7uxGyevS8UJDV7c+v9qHixJHIiKf5XALzLOrM3VtxVrnWWeehBumcZGkjLAa6p+Nz20rI9/UvBzOuJY1ORl72JQQYwtG6MVVS165nDhlhps6dYbbh/fMHdh/QO47G+4FBz6u1dpa+axqpoeokskLIHwUrKMDT+njNHUAr2uK3i/HTmQaQdiPSFJOR7XmxHawxT8WN4L6iAKjuD65Esj1XzSE43G4sAtfdzv3vPPwoZ6lib5JI9u3b3c34QNE+/AWm2r1zsaHky659FI3gU+yVEmcI489+qh78MGHXB/m0XD1Hy4/RiAfPBIxJUzZ4SAW8Hkq2Nk10Y2fwOdI+RC9qn9MAABAAElEQVT/8A4xEydOduPwla1hJ3RZP+7DG8QLNI902tM23r04Fbe4bHsiqQrehPL8jBNzjYSTFRybGEdYXvOStx+975pr3JVXvQrXfjjPqycum7703PPc333i4ziwH6jwB8uXL3V/9dd/46ZMm1ZdiC9505vf4r7zzW+6b33zW+h/vSn9SPkZODm7g6SE6uqTdsDzSK4HX8ZqwU/L/ZEVnUl82bKlbi2+1dmo6+Mbe+W0su4wcfLc5759lfftNcBal4TPlOYlmzctPz5tpVvQPcNN2/+8RJi9yNs5cZ5b33lcbo5YnoNFy/LSOzTS0SRbXVFyHNJBZI3PZfimq46/7PKTTj7JvQIOTm4MDxrciucUW+HV+vihcp/oA08/80x31atf7b73ne8m6mvHmcMrXvnKTAfXgSWJw1wqCRLr+823v81d96MfyeNy1fQfifz2y/GR4eS0rT1d163DM49r14KnfgTIDuA3PouSTwM1qz/1vuH66xvSn/L50WF+j7NaBPemt1ztHn/0cff4Y1wo1mFYTz4IG0rLTlju1q5ek/uk5oTOW3YPBvmazjlu0swTYbOl7pGHHtIILsdIc+Kkie64OXPcQw882JD9miGibJ6C7YO9807HHa+P9dWSzT6hDkxn4wPaU6bPw56OpzTkPZ28mv7M+vXu3e/5HfeLm252N+OXpiM+f94CkUK5lrjcMX/mFEG37tqPgzjWS4N0zkvPwfLMfon8TG4nlkaOP/74gEp3+c7FaRPHuUO9fW7LruQBmU7zNa/9dbf5hRdAnO1Xbrj+RpRoO+vBofqT9iVwRFVsmZm/Fg8yU/mqJ+3ByTzpmpVP0WvXwIkGclQ/lKTq5RpDs/L5kHej+rO+JXBw/KhxlT7C1+zH4WH47oQegz+vbh893qL8GEx83foAnBphs9+wOAbN0XSTbJ2LzqS/FReTZLxDDGArIqmeA/vdRnwLeOMzG90OrJ/xDdCf+n//Fo8j7sO3d7Pv7Tx0oDK/DVGcpXDf8jY/95y749ab5Yq4yeXHzPvk+WOjSsJO3kmfkebPm6cvds32cWjaDRXzWtuNRkv7YzgUf0J/1f7Fz30hQ7XaWTx3l1QH8s0Oo1k+HRu/1n5jDXMwarn/3vsQHaKzfKplHzOZ0ZawtAAtwFNwi/R+fN0vEreQTBg/DgePw3Bs2yo+dM6b1/mh8fSr+82qz7/wvO1GkKeojOB4ynog47nrTZs2utWrV0f03OFV/B345GU67T1wSCK+Q3yoO50w2L/6la+6FySSSxcqLvPBJkUdOFR/Iu+To4ek0yxh83ZgV4ntmrAfecpUWqCaBWwe8vSBDm7PLnz4aOMGRG4HEi+QqMYf5t93793uV7+8JcySfZ6iZjm4A3C2P7nuRxX0XHe9Ccs8dIzptO9gb8WaHA/0/33dj92LiDitPUcK4h2uSKZ3CbX/mrQDyYWlAT4j0YrKbWmBSgvQQXCcTMB6187tW92ePZVfkavkys6hY/zrD/+FeyOudp50yqnZRD73xRdfdD++9j9lrS+L8LZf3ur++IO/737t8iv0ZahZRMiz9cLrrvuJO8yLdjbojxDEd1epKTfUoITN2yGO/hqxn9qbNj+2Eu/9m9W/283cv9NN2rDXLe970W3tmOr2uk45nTm2Wltsa3irBz9QtG/vrmE5ONNyD57F/sq/fUlOOS0vC3Idla8Hq5ZYfjsc3Z133C6OrBod87vwtp3pM+dIFNfIvGh+3jXur9rpZQfh4JSlhM3awTq6YTuygmMs8ch94qHn3MLN9+mjXetwwQZtXNo53j0y9wL3Qkv1G0ePMVPk0pwW2BMXUCveVD0c4XScWa/mGopMOrt6F5ZY16TJB8XZHcKpcbPzKk/6KJKjo6O7K2FzdrBBYhFxXftJ5Gxcxwac4Prcwi0PusHDye/PDh7a7xbvetptnflSf0PosdHeolvRhds1dm5/saoj4fPVXXzjDKK9A3CI9RxOWl9eKZ2COwK6cLP2Nlyh5YWLejcKmwwe0DrxWYCZ4ye4HlxJ33OwR/itPIR8lfxxxy/ARRHeY9rcvMqTvozk0Cs06FCPHNapjUZy1/30dtTXWHD+/8xY6r537S1u48ZNXr/G+OrJn79gvrv6zbNF9ibIrkdfr/zMeZPcy1bwrvbK1Lr3RfeVn//E9eBlB/Xk1Cs/7/yXuZe9bLz7wleuzdUerPd8yJ4/f7773nevHbae6XZc/earxTDfhWwdZ7X7sbO9wx0I3wcYmHUlbi953xkr3ctnH4eBiw8tQeD3ntngvoR7B7dXeUWYsfMK6VUnLHdvW3GCWzEZ98mBfxte6PAN3Mz+HTyGRWdUK/HpibeuPNX91vJlbjocJRfbnti92339yafcz9esrXC2fMFFGy5tMjJlXcOZZ0Odn+RDJMcu4UTXVMLm7ODNFh0J69lv7bpNxlIX7jvQ5zZu2ooPzjTOU1coCAbxSvI8Zc9pxQsHVlR+5Jq6cI3nmWf4ZuADjahWk2bJ8l2id972YKVLIXv8xOmumf6pqWxQuGOXtr1RvadMmpAZHa3CwemfL77IdeB0cRCng0xwH+4t8+a6E3Az8f+89ZduV5UnZBiBve30le5Dp56KJQXcy+j5Z+JZ6g+dtMLNmzDefepXd1U9pWX098fnnuN+Y8ECdqrIYP0n4RHFj+Pm4an4eNK3H34kmgcsYzoIZ80Pndupcr35UUQ5nuygr0MSiIimxJuyhxIXZT92S0H9I4rn2N/eEC1d41378SdGZtGYJS/7hGJplwL0L8re0o319eULHPrw6F868RT1D844XRxcuoz4qimT3TtPW5n5oXKWz8Mboz+Ecjq4dOKX1K5euNBdtHhRuijCz1+4wL0RNHRw6USZf3jGaW725MnpIvm2Bx3skfQvrRbJMZxkPFfi/ljSoD2iXm2Qvjn7MspvTp+G6UXxHPvbG6L73De57vOudp0rLvA5eeofWZuGAZK//g3br4H6Ozra3cw5C1z7pONc+4Q5bsZx82InVIPfWyxorHOLp011Z9R5MP43lizCc8MdCT5DLl60ENFbpYOz8kFEhxciIqSTTSfmXbZwPp5Bzrjh1xO34rG+S+gEU2kQ3yWW40aN9gpLgeVYk8MTY6yAmhgo8Ux7XHT+mWomjkIemQFf2PCkmz653V104VmB/eLyX96BBfkh2pNPUaxft17GQJ79Q4GUvW7teogdfv+rgrodjL7YRSMxSQiTac9mx9s6rB3dyMeARGy+45WP+1F+HvZgf4/DTbyrXvUH7rhVV7vnvSku/tBr3OZ7v+Xuu+6f8Kwn1r+QL9MuMT68vbSVsl156gnu104/xXWdgOdQMyIpI+3GJdmrdp/v9h7U0+MbbrrTitxxOB3VA0OUVbEzC6ecjLrSFzKYN7srezkiEoI2zMb3d9Mpas0R9C/RmpwZgPaW5HdKPLbHlZe9NPNeo+Nn4dnW0/FLpT179rtbb39Ac4dgzxt+fn0scQj8ZM7qP05m/qqVhwVZ/Jnlkulczx3fcm3TF7j+F5/1OX5A5aA/XwyhL4eA6BzkUUFr3zosnCfSMOUvW/VKN+PMq11PGDwhEJq16q1u8YbH3VP3/FSqs/pNkSiSDJRpg5M555JzXNccXGxAZFQt9cORXDmlQ5zUjTfdlSDbjqug3qMm8kNkBy48ZN0nR5129iavnId8so+6t/PbIqkUaTtMe8b28RU0IY/rlmUqLZCfBRBpxA4uP7GjSRJP76bOO9n1VS5fOT7iOXPhSokYq7Upin4Cgr24CrqnxukmSbfwCnYVJ3jbhg2uBVdXq6UW6HwzrrSnozjS85Guu7Zs1aukVQRQ9m0bNlaUMoBjxHokU/VWH0mtyrojC/D0pB8PZ/Ptv1lH+YjwCO4c7uURPPt0hgfcQzh9OnRw/xHUcGSrppPrxxpV1SQzP7uUkVQ7biFJJ+av2bXLrZo1K3PxvweGXrNrJwK9DM8KYet37HRffOpp9z7cQlKxtgZ9/hMO7nY4wmrpJ3gF1XmIJC+fjSvpPooyWjrIf378CbcJt5OkUzvu+ePLXY9kKp3ckbR+jbp7D/Xgub8eeXVRDbKjomjtVgzuNgz+jI9Lr9/dh9sI9uEDOzhdGiOJTm5gIDxPba7hdAm8ZYM36YaJN+7eh4zl+GjRFNyQKxESHNTWnh739I4d7kCN+9wYof3r/Q+4PYgI33HiCVhj6xJnxVPcf4Xz+ypu/0jXF9bNt5z81W13uBdWnSX3ybXScYH3BfTrv+Ndit+Hk8s61e3Gq8j2yofFQ2kjuy9OjhGCLrjGp+3QX20IfcpytY+F3Yy+LQpXiHL8VeZrZzZjv344CkY9A9ECvnSA75hUxSpeBquutxyZ8k3bdrt/eWCv+90zJuhjXV6vvvZx7l/u2iQ3Ah9J/STySAxob6ci7edlT4IvefPZbQ7vlHTfvb/fHQK0iDwaL6n514/PSo7DEwmx0yGl8m3DfXBc+xqHK7edcKY9uN3kEKLGLAfjVSAnfi1yr9o38N2F7z/5pFuMW0o68LzxWjyVcAjrbf3BG4JjPttTfn6m8x/vutt9ATceL58+zR2C43xm5y7cRMwDGGdCMnXjQgbzqduR9C/i5KgAkwcxlFzml+VqIDWIdWcMvX3MXmnYoP0OHzroDvVknNZFHZMS7NHKDrMCo/eaxgonCYYpvw+D/bM3r3Z3rJvuTps3RYY7v/9689Mb3IZtu4KBZfokqz/S+hdZ/7QJPPzhgXXMtOnjEfnswVMKh3vhVPpwJVNv10jPLzqTadNm4iPn+7zzso5Tu/EAuP8QfikzVkeT/D09h9yTm7dUJ68oifkZER7A2t/Dz4UXGeLykHXK1Cny1uF0+yqGW4PzI+Lz1Vmt9eQnIzloSMYo8ijxhD2sA+0BlehIjCNlMpKLcfI0Ys9eOLjeHr30H0UeUYWoyXpYBR51OL9wdueaLfIbjfrnbl/fdxt2DLo7n8G6Ks7u6OCk+xDZHMQX4LonTMZ9afxgnp4p2HiiI+kbbHFTEG3txGmoRmJe4JCASuZptCaryYQpHl90yC43ag5Fc9BZ8vhmaL4xu7NrAhxiT0X70u0tGk9Gcr4VkWcscbGA2cObQxwa96Mjid+rituRygsweUbfhyN75OBEsJVEDH6nxMUCocNnxlGOP2o3yvnuo76c2D3797oJk6YC1f62XifO5z4noYzvY4tHmgloDk6cMNGdfMEb3PSFp9VkPLRnm3v0lm+6F7ek3ybs9YNeC0440y0/59WuY9ykqrLaQHd49wb39L16m0xW+8gctrdIPHoLSVWNRRV69mqJqo6RcjSTUVwyVW8/BzL+a9pHBjvfw6+ESdGCVZevxGX5UTf+2JfpYRL2rJQP4lS0D+uV+13XuAlhabR/AKeV02fMdhMmZJdHhJk7VIBre+PdhW//X+64s99S6xa7SMKsky51N/3Lu932bXY6G4+vpSvPd5d96HvuYOVTZxG/7fBVUV3TFrm7f/iPmY+pGZ26ulrGiuuPecK9+uXyFpLYp4bM4T4F1UpjpBzN1BWWtC2y288jGP6RsstZEt1aoYTMykjV+ZW4LM8wWpA1svbh5/j6eipvpzCFeg/uVh/IiAdX0Du6uuW01coN8gBIRzdx8lRxVrwQod8wNYpakG3GV7lOeqmbe85b5P68kHo6/Oa4jhb33K6kg+mee6Zbecnb3S3f+z8BeYvcBH/Cy96Y6eAWTW9x2/ZB1+BiMO+gOf6lb3NTbv0Gvk2xNZCVtVts/7S/7wPvz6q1ah7vwo/uOicVJyePTBnp8iuvkE/6ZRRVzWpGPj8XyDqaSdQ98SRBDf0p9/JXXBl9efzEE090LfhqUr20xn8ERCI5ElexD9cuOMirlUs9dfSrZf+R5udtD3ydjyS0uQe3Hcj3Pqu0f6T1U8VS2wLsy35fc8+P3aKXvxfvXLN1MK23vXeXe/KOH8R9jvq5Hvua172h6lyZPWMi3pIyX662HsRtJPvx1a5DuDjBm3RZV1bqHteF092JeF52QUUENw53n/zGGarXjU8NuPXbkzKmH7fQHT93jnydixdBmNi3E6bOqajq9Hkt7qWLWuWq8b/fnbw3kPclv/Xd73O9+16s4LOML3zu87EtLDOEQf8MyZ/guxT6jYdQaJ191mnn2BEpMzMSv66zDI6ombQM76oiXyJVkS+6JAjrIxpdpfStIp/SSJmirluJRXtSlwjJltCHN6ZKqlH/aClfMmeGe99589zLF/D+K+dwcdX9cO1B97lb11V9N5o2HttjoP1RW/zOc+sedb/4x990y899g+ucOENyD+3Z4p66/btu2wvPJtrch1s4as0VmoduqAOOhs5m6rTpMgf379/ntlS5Sjph4lQ3bcYcfEt2alq1BE656XTKytPd6XM+KN96uPnGm6W4Ew/+d3Sib1PJ7jzZ25Mlqf78kZnRYP/XslFKrQil/JbFJ56RrV1EVu6YBT7+0Q+4to7kkdnKsuCe3fvdJz71lawiyevBWhwH+GhPE/Dw92dfv8JdMDt5JMfHQt2/Pt7nPv3zx3GalSob7Y1uUH9e0ZRXDYGeNqh2P9s4XGTgldasdOrJS9073nZVVlHVvFtve9D95Ge3u8WnnOfO/K3PVpyu8v69cZ24kXhvcvrT3zx/y2fc/df/e0I22/Gyq//MTTn1DYl8IvOmQA5OV9NfJWTEeOMnXyUf46lgGsGM6H1yFp2VUI4tUbRaYQ8f10XRWj3cH6Uq5CCfj2pFUYwdzUYhXDl3srtwbsYExf1cb1ox3nV3Y0aNwnbJPBym3nykiS+MPIxTS3FwVeTZ21uyxgn1aHi82XjUYey2rH/QvfjwtXhDb9Kr7MWxNcvB9b7woFtz9w8rxj91f+be61x3S7Dw5kU+t7vSwTEWeP6ur7v9e3cKVdV2eXsUWR69hcTO7UuoR7aqdtAlY2w9XT3o10yy5MmgtzWVUQz5ih89oUpOJGJtmGwyQUdx+6RVBetvEV7WOGH9DY83G48+QDuI+9Tuv/ZTbummR93UxMtMpVWJTQ9eVf/0Hd9LfCEs1GfTmofc4c+/0y0560rX3lX940Rca96+4RG3/qGbsY6oSzKhHGmPt+dI5EfvkxNPyorhWVlxiWN2pu2B3uGE5YDTIytHUnWcB1Pasao9OSB5JPP1jFrIUVsvHQvtLLKfYD+Ol6z5J9lSWnu86YHGj0cIM3l8QuGx2/8rwquNR3lXHftJ1ABMj3/gWzetcVs2rtZT8Ixy01+EoLzm+K/Bn6f/qYjkpGHQ0DxsiXNgxfZIH1F1YHGrdCHOHLOjwWr2tPxRC8VKWBxfdo5rm7nIHV57F165tNHniiF0nwObqYQVdhDLeLtUjJeM8eUFCKgYfxCWlpfGlVFy0R0KrV/q4RZ5VqNX3bCt1p4m66unT61yubrqmyd60Y+XeNRF0fHTcvK2j8k9VmDnyRe5lo5uN4jXLyWc3LHSwILbkTW+wiqzysv5Glsoyz7toYFIWuKxwUbCHsnaRj92eN29rm3GQte3efXob8wRaEE5/5JGz8MeZSQHm4aGzDoSFFme7NLRj/U+fsvob8QRbEHW+AvVySovcnweC/Xh069MZiY7sy9xHVjV7KGloeUsxyyXxC03Lc+oSlhagBZIj480Hs9Us5eNrGw8zT82cX/3DP01Uwkbs4NSNb6tZtfGJRzNlIerfFdAdObV5aNZ+aNKt2rjxPKbVdb4xjb0Ts6GYQl1GNWzQ7ODrZq8ZuUcnfQPbdrt1u9P3W1KVeHgvvfkPrw5dvQ/1TEylq82Tiy/WS2Mb2zDMpKTcdPska7ZwVZNfrNyjk76/Xho/M9/tsHdt7PDDXRO0B9uFv3a0wPus7c+Iw+SH52aH21aVRsnlt+svsY3tiGexcF5Ohw9zUB/X/WezbI8WjFRQ5lBPASQFBnSMqrbN6YI7I9M6YdRBu9bu9m967ldjg9yS9yAQcW3kPThkabR2J6wG0dCf44F3uuVNf9kgopRQVRNMQpgsnJYPSEPRdIOlMt8T8NjuBxODvfu0zBIHsS45RtUsjFcnjaEGcRDA2ZIwavbN01ubKMV8vU//KXTaG3PiOvtJ2I0HyMFsGP7NK7tp6EZXvI57pQgkufLI9zzR/gxWo7TVfX4dO9613AVWJbTUjoM7KgaQu6HuB8wtexrJGm2Eq9uZpYcs/ZhiMVRloISemlRdcNUlKfkjOH5W0ZyGDaNH8ns0KdjreKI6rOjfMHHTiTnrRM1v8R1QDRsBz8Qo/EYMWLH9inS9tNQq/PlZSRnduSngqIjo9nPjpQlruPF7CGWMsQGVD1Yx75kD0Vy3JZ4bNSxYg/2uayhZfR/FMnFZqm/5yO3sWI/M0hWe9sZxrTAIBrO0NQlXs0eNKAcRdVMZlf1SlLos8LymvZV+pCVOSXu7ejBWLAH26iRR+X8EzOERgjHFwszcUZyLFR5rXjpZXs7b6ZAZmq+G86XevIj09XGv1XUwReBygvqfMUZ8noP4yvaXrFq8qhfBy5UWf1GH+J4jZ1cvKrnn9rw2v02vtcro31xJEdFhcRHdiVeYQ+xkJpJ+0Mo/MbyLc9w2FH5NENfhAMib1+SGyn32U0lTktoGiv2YJ9zSKTHR3QrdTgoaJq6OMadlzcZ32895eLfduNnLVWjVtnyWwx8MebGNQ+qMqAL9WmHc1t6xqXu+FMvqf0+OSi3+9n73JO3/0BefS+q+vFu8iaMH+dOfvlb3JT5p0stVVTCB4H2uuceu9mtf/gWebOy8dv8acUAmXfiWW7x2a92nRNmZorJjuTEgja8Ko8savixV84WixdKm5K9KIXpAubXsp/Sp1lLPGnHsWAPtjGKvFLzT6yRNkJooqzxx3EHnvHjJ7hzrv5frnvR+SFH5v445J572qvxYsx34J1xa4GpYIvElp55qTvt6r+Tj9ZkCggyJy65yI2btsDd+8P/jSvuuBlcGqfyujo73KrXfMhNO/2NFR/ZCUREu2eufBXY/6db88BNyEO7Avsct2iFO+/dn3cHUx8MipixE71PzjxjfIigQkweRpFHKn8MlUvLrflqnHhbJV+vlNGMRpCEhsWCitvjl7Tmn7DKHb/iXPkCOl+/vunJO9wLax8qb9gtzuwNSeY40CFiIyIFDa0mLV0OYZR3/AkvcROXnu/4icAw8TOCXbjs+PTWJGPPYCfe/PtKt3nDZz25ljOKO/6USzMd3KnHt7gX9zm3JfheBJ/0m7PqTW7irf/uejZvssZB5qCbMmOum33WGytkzZnc4vipxMdfSOmEM9+5p1yCaO7WYJwqzeIzrsh0cCfObnE94NuwY9C1v//3PhC2ve4+P+e3ds1aCVxYDR00jckDTRq//BVD+yRho/KX4EtgV6COZhI/SXj9z67P1DetP3HK56cPmU5ccaJfixC06mbN02uislr2IVFkN+xL/QVBfMzDrbriXe7k137Y9QYDfsUr/8g98p9/7R64/ivy+cCR0qesJ9nfr7jqle7Ek07mkKhIs2dMcstPnFeRv/mFzW7fPngXDhxLZliPd3ZPio+vPm9yN8b1SfqwUz9eVb52WyjAuTNfcp47Y16fW+s/38n53Ybzwvauyo9cnzm/xb1kYauo8KU7goGFurCc5t762++q+CRhx8TZ7vlklaLZa1aqTl3tA+6BjUmC9q5J8vnRRYsX+VbQ9+A7KbNf6p6PcnRnBRzcy5errG/f1+/aE99QTRFnoXRATKYCDVANX7tmnRY2sa0lT+pJ1de8/qpTI/qb2lbHvjPmNuTkjC9L34r2eeJIn4JwfoV9xSs+VHH05NHu5Fd80D2Fd/tzwhStRylfOzhth7Wr17j2jk7f+0lw+OBMt3zRlGSmYSaoGm75AeRHoPkpQV476PFfxQyK3a7du932tesQzKyLHGS6GqM3/vRHqq1808ZNbt+O5wwVOHHmYdcyLZElCD+Iwy9/Haz8Vo6MS36SMPy4dktLq5sxbqVzqa8u7vf8/HrYPpwptzMy48TjAUASdmrhYWRSj349jgTr162tKY8Vp+uj3Eb0KVo+9Qjtc+l5y/BJQsT4YY9T0TRORp/q2cvYo/aCj+LyxidMneVa+fEROLV0ahs/zY2bMMXtZ1SAVET9ebfnWJO3ds0at3EjnAEalp4Pp5601K1Yqt9ulYGRHm9VcNpo7/aN4szo1Cz1Yf/Ld/a78fCp4VfvWc6F/MfvvcU9/IufC7mN3/6+fndo13OO63ZhenLLoNu0q1+cSZjP/bbBfvfzn/zA7d69Jx7PkD95ylR35em/B0+b5PjvxwbcJESZeysfmnH7Nj/h1jy92j391FMJ+6zqn+3mXXJeYm1v065B9417oa934K00KIc1AbclXsseYiQSxCkcYMxN4LXtGZKr/WP2IvBY6cq9IuozmdbOEq/Xv9XHS9RjNGKYauCcz1uefcJtve87rhMfVKPDCn8H4QRCnJHdvnW3urX3XCfDmPzmD/hpxafv+I47vOURcYQhHyOnEOc+1/vW3vxPbu9eHjgpSbeUt3fPbrfupn8SmjQfI68wj0738OaH3Lr7foLosz/Sx+Q99asfuP3rfymOPORjhEka5vk3A/OKBTNLWMsOMFGTqbY9KUzrGxloyrPOBdNa3IadHAaamMc0kvrIIESdJVS7c6v2T0IrlQ5qatPiDvf2unt++Bk3/6lf4ZOEJ9Ts3wN7trkND93o9h04kKnH1uc3uF995ffdorOucl3jsNZXZbwMYJ1v2/qH3AvrH3HyBbBUuwZwVeKRG7/mtqx7wB235Ew0z9qrLQ3l9h7c4565/6e69piSQ3+1f99+d+e3/sItPv0y1z15ltc7Kcd/44GeVs1bwlp2aGqEgViPYAqz5OoEp1R2LFPRkHWct6TV8YrYUzjV+OVaPY8put5SPi1fr3+rz0Plbnar8g4d6nFrH/6lc7g6mZz+7BUdl2lYzQ/sQWT2yK3frcqXlmN4Wl4vPra9afX9+D0AWdX1MH6DaTnE+aqvx371o6pyGA0iqSctYT07iLGa2NSXp/bXLtSeUPFF5VN6J04lmMKrrEXVV8pVWzdmh+rjRaU0u60uT/UZG+WI5OBF+c9Wl7CuHZobZrRuDfuqyUUkqEYEspJbVvO2gRYsGFuteixlmeWUkNYYSXvA4liwyp6H1huqU2PbWvJQ1Ria71hqRGvFrWdBFmTl08zMH4vljQ0xpapjn2ZE5UwbOricRZfihmSBrHkWjp9mhVJeyF9P/rFbDidHj08DZkEWZOUb/VgsZ9sbTXXs06iYkm4MWCBrnoXjp1kTUF7IX0/+sVteRnJNR6rNDLY6R9JmRA2T9sCubW7w0N5MKX37t7ue/bsyy8rMkbJAvUiqWT0or874GyPleB4D6wDi8LMgvXtWPgwu+WOrXCPeZgZbbfs0I2m4tPtwBeqJn/4f142LDhzb9uvGm26e+NlncIXqwHCrKPmHY4HMeRaMn6Zlc94G/PXkH8Pl+hYSP3vp9zH88QfjyJ5uS1ztwaCv6QRvUs1+TcsaBgMH/AM3fM1tXvegm4cH9Fta29wAbq58HvdPPb8W9zNxQpTpyFnAH3gy599Qxh1aIoFaOZ9d9D652I44AtBAUXeXeGSPofgBHiFr2jMydOE7fbg3aePT98uv8MrKCpqzAAeJjK+M8TKUccfaq8lD0Via34lIjnZhig2gmEUiUjiWy5OGMXPUhkEkZ4RDEWO8JTxGLcBB4QdGcnzgTCCZ0bgBhC8+kzDGpLhjv9xHcnT52nRuw2MJHVwSH8Pl0RE1tpcOnBq4RHJxedq+NvBKOMYtgCHCFYP0+JD5V7GUEI+nauOPFCqvnL+ttCp9OY8WNHCJV7eHDihvpBhRo1XDa9g3wVIiY9sCdeZf0jgyU4OsSpw5kovNWJ/f8rY78fU8ktBsApFT4hX2iEeVWCpGlTIbr2HPgKHcHeMWqDffkuapP/5IIVQ1xt9YKS8juSaOdPFAk2NkjOoxMxuvIT9gyGX3iiuucOeff34uso6EkJUrV7rXv+51OKtI2/dIaDOydbLF0uoq4yWpTdo+lThzJBebsR7J4RsPNJ+4e7Vj9FCbovFDbiXuLQAgRvMoh1J1vK59Y6HD2uObfz/0oQ/Jq3Ve/4Y31JRF2uOOO87t2rXL7dixoyZtkYXz5893nZ2dbh3e+Mr0/ve/3y3Hq+Yff+IJ9/TTTxdZ9VEnW1fOOA/9eLIhBZxl8RirPd7UtRlHLK8Tn/5ra+ObGarz85aiQ/KmSfJ5E2XoI4WjqDzxPrm452mIOPF1JsmcJDbWy/0xMzZYYC0dUrXtFzAOeZevm/nEJz7hDh/OeJ91SuqZZ57pPvyXf+m+/e1vu69+7Wup0pFD//Iv8B6wxYvda3791+Vzc//wmc+4FSed5FavXj1yShwlNUm0FY2b5PzS8RXmhftsQCXOHBt1K+bNdG89fapbjg/F1Eov4o28/716n7vhqa3y/VWjHe3zO3ifnDWJhjA3zTzF45yxXk6bxNYw+zBXU9I+SqlH1qxy48oDXnbZZXjV9G539913u0svvdRddNHL3T333OsuvvgiGfD//vWvS/T25jdfLdW9/OUvd5MmT3af/exn3aJFi9xvvf3tbsHChW7jhg3uy1/5inv++ecjOXfeeZfsf/GLX8RHitvdb//2b7sZM2a49evXu69D7nPPPefOO+8897rXvdZNmTLFPfzwI+6rX/2qO3jwIL4M1upeC0fG+iZMnOgeeOABRAyHJJqkIh/58Ifdf3z/++7sVavc4iWL3W233SZ6LliwwL0dOtERbtu2zf3gBz8QXsr7yEc+7PghFzr1VWef7R599FH3pS99qcLJi4y3vc0tWbLE7dy5033nu98VGeecc457/etfL23gNzy+8Y1vuOfQ3qVLl7p3vOO33IMPPuROPvlktONh97Of/UxoL7zwQjmV/sXNN7trf/jDXG+gjiI5P9+kg2Rj48nGnOFGkY2TmjInwt5/ccE0d/qkjHeKmwiDeDv+JfMmu3fhVb8PPLvd56p8q73aeD+ay+V9cnYUUchmhH8lbtawsaAdzc7nj8n207iVmARC5umfsOa4oZNZddZZInEhHMR5557n3vve97p2nKacdtpp7s//7M9kkrbiaQcmOos2fGpu+vTp7lOf/KRbCAf3i1/8wi3DKeMnPvFxOZU0OR/84AfdtGnTXC/eNPvRj37ELVm82N19111uzpw5IuslLznb/dVHP4ryw+6uu+52V155pZw+s5AOkaeis2fPdr1wbscff7zw2IZfP6cuJ59yiujc1dUlzufTn/6Uu+CCC+CcdriTEOH97d/+rTv99NOlDWzb6+Ck6Kyo/+te+1p3JdYkwyTt+tSn3EUXX+x279kj7aNTpK5/89d/7ZYvX+52wfFdjPJPgo7OmT/Kvuaaa9yp0IdO+p3Q/z3veY98X+CZZ9ZLW171qleFVQ1738ZEOD5slBDaSNKK6uMm54KFk93pUys/7NGxZJXrOPFlFXoPHjrgfm359GiMmpx6+h3N5e1/9+lPVjS0Vsbn//lf5JOEYne6b1qhCrwCA/2KV1xZS1xF2fU//7m7/qf4iEYNuVYfJ+P7f+93K2TUyuBR+3P/9C8NyWc9H/gfvxt9kvCMFdMaWhR/EJGKJPBLDFfFPrX0zKvsm9/8pvuP//gP94UvfMEtwBrYHkx25n30Ix9xt9xyi5yuvhYOgkf8++67T5weI5qXIDpiJGPp2mv/CzK+GDlJOqIOrPN87nOfkyju3e9+t5DSCfDJiu3bX3QXwkEx6rvqqqskcvsfv//7Uj/zSEMHtXTJEvexj31MTlffhojLEp3bpImT3Oc//3n3X9deK7r8709/2r0C4+mxxx4TMp6i/wGcLy+20IEvgawwMfKaPGmS+973vuf+7ctfFl1Y74cROTL9+Z//uawHvuUtb3bveue7JBLdunWrlK1Zs9r94R/+kej1ge98R5zhnr14wQF+vXCUl1xyifvxj38stHlsrnzVVe6qV706U9SUifgW6nyEWam0efNmRLMvpHIV5ZDjo3pdnZxIydQ6aabrOvMqyRzs2ef6NjySIPi1iy9wc171fvkk4ecw322+1YMfwFy0z3cmBNZA/uSP/rhh+UPxJ/RX+rUuaE9PzAlZD67Dp8pApHQtnr4KpEORr101INfqXYfPoDUqn7YrUv4g2sX28vuT1G/2pJc38UlCMVJNO9Xo+9yKeIrGZF/iYuSWTrwQwTRr1ixxcj2IXnjKOICPl1hajU/mMXHi0Elc/aY3SbTGU76P/tVfuQkTxkv5/Hnzhe+Z9c84/ug8x3V3u/34bsBeOgkkOpp6adw4/S7UTlwcYdq+XU+fxo3TepjHTyhSFp0dU2uqbePHK+22F7dJudUbyfa22b5dL75YPonXrVsvDo4RJvXn6fVinNIzMYI1vSQjh8062JcHeJsHIVwwd4YbdyE+vZdK+8SedGKVR1FxbX6eptjcwN4XXf+2Z13brEVuYM+L6WK3AcsVN2x8wa3BF8REjyrzm/MjLOc84XxpxI+E7UvLqYYPyZ9An/afY70hw0biaGrlUxGW14L8RisbXksOrJRZXkuu1Vu0fNYT2ucSfJKwvaPSSVSMEsnw9hFlq9gpm7HwXJ6CMa06e5V7+JFH3EMPPugG3/EOmdQ33nSTOwsXJrZs3SIRk53+mlK8vYNra7+EE2TE97a3vlXWzB6EjDPPOFPWve67/36sB17kbrzxRllbe/ChB905LznH/cmf/Il75pln3AE4vB/96Ec4FdQ3n7wBV4NvxjpXmO5HVMnT3N9BhMi1v/PP11Ore+65JySruc+1P8p462++FafeXY5Xc7+CtUbKYLsY/d2F9UvettLX3y9rdTzFDRMd/SOw0elnnCH24Jrny6AL9c8zrV79tHv22Y2Z827lyfgk4bIZdarDeJOkULbYPL0NH6Vpm+kG+5MHloO3fT1bHpY2brh3jfvZ/RsS87KR+djoGViWP2hE/lDnO66uIoJLeeQSTx6hzB46Kqp45Sxv7Y+kxp+G2aOs+Fye7q3GUfrEE05073znO2XtjKed7373u2RdjetW//lf/5m5sE6HczZOZd/y5jeLojzq3wTHyMk/d+4896pXv9q9Gr+9+/a62+EImT7zmX9wfwoHdwnWvrAA5jY9t8ndcMMN7sfX/ditWHGSe8/v/I44PyH2G+r3mb//e3cN1vLeh3VFfo7u+7g48dOf/lTW70LaavtP4Rud/4SLKlxPey9+A4hC1+DK7bU4/eW64GugJ9cqqStPhZ999llZ30vL+3tc9f2zP/1TWYtj2YaNGxtatkjLqYVzHup/5XxUvibGHbwIqblZs2Wv+8JjU9w1p46Ho+utpYK8meYHz+AK6xObwVqpR3r8jha8ZeHylbJsFLXebGkZJa5HNNjjEx/7vSYiOef27N7v/vaT/xbxi0kDex7YtyvTkZjpi4a8kMCorqdHr7xxrYynrLySaad21XTgAj1P77Zs2ZJoA/Mm44ot17bSr2/6v+19CZweR3Xnm/vQzGh0S5Ys65jRaeMD2SZgsBfbkpUYk4VgcwSyP5Zg7pv9sZtNyG83WcL+AsQBTEIOAtmQhAA24CBbdsCWsS0fsnyhwzosS9ZpHaNr7tHs+7/q113dX3d/3TP9ab6Zr0uar7quV6/+/erVq+ruKsQ38lreq0ePuml4T66V1810OhqsD9Nr8IT3+fDQYyQONPDQA1N3bSvoYF0RGIBXe2oeVUd7e7soN10CiMo3kvi6+kaqb+ApuiUfQofDsOTe957w9bqouh56eDP9+708yHB5PHhaML2FlswIpy+WFRM6cnaQXjhwijHq88iG8KP5lb9yD9e6jHrNMkDnYQ8B3OiROC2nvtIIhjX+PPvBzgrFdjBiITvIGiw3/AUdlKZOh4NpeOhxKhAJxRWl4JB1iKeRWGAfjQONsHZhnS0Nbbw8XTIHmVC5UH80lVn0BnmquvNwl/wlIhmsf5yHjZIz03jTfjQoD3uyEMTDSyl+pTiqjxKjoVe8xjzHeEUAMoK/oHwgPBIXRy9OHsPqH+f5c0sOAhQUpGLhpEKndNTXcsGwxud+5SIAmVC5UH80aMTRC9Kf4GHeTw4DiLPQHvB1aMnTPXwgdxjYbLnQcNCXjLH4jkaK87ITCgHICT8YsV+tUEmDXMEVyJeJLoiX/PhhepDUSu+/7i4k6LX2Ex6EpSuHxGu+ikw3qAAc16nCC/qSIRY/l0R+UekIhMiJ178MOKHyxUnBeAnrD/vaX4O+R18yFeSbKOnufnIyHOBH/hvfCchIkKdD0DAy6q9cFg/H4unRyK8qHAERLdPv5HUHX9iPjSRZUaFhX3kOVHDYZ8kFNXce9o9wggcLlwySlpDFhoWEoVOIp0Ukv6xsBESIjJyoxeXJix8ayWpFhYZj6Zl6PPoTO+yd1uUoe+dDBsp9M/j5cZDhUAZFyBBCxXysi0i+EHwtOc0vKx0BkRNekwuRE8gPnMhRQt/IXTS9qHomYrw5rctBER0WzudzAA0viNd8FZVukPHhozhE+fwZVBR+wDR3OQIGAdhvIfKF/uVAlM536KF8hfdfz5JjIENHCo4Mjdf8FZUOJIrgEUh3LblAvAos6OUuRwBSZZ6CBuTL6V9AKLYfBtJdehXVP82A4MOJA7kll2qkM6pJFVQiv4ItOXzMH/y0K1dnUQjkllxof+LI0Vqi1RBC+XNGEhlPnPUB99oOI58drrjyPEY6oyNGDPmLC8fgEyXu5Rz/u7/7Hpc9fOt62223uWH7At+Kvpd3NoFfancp7xCCQ3DUL3V9paEvvc30woL+5cgZV1xU3pAHmQwl01dteoi3w7i2wxMwnXcGhqrEf7kyfiCcp9v48LWBDLDIn8HHXEucL90EwvCFKJbSBXfKjasrad76unofGWycGeawuwd2J6ljRbhy5cqwLL64hQsX+sJpAvgAv6bG7HIMfywcNgjV/etGVn+x/hclX1ybT944yGFEwpNfSffCRn69sCnvhSdaOp/xYMwQbJtinAm7NmKeLsMn8AFCghJ+RJAsyAJhpJv8/Iv/kfg6NIp4b37zm+VjdWx1dPJkF+/V9gvZnbaxsYFeeWW/nG2AA2pqeJNHbGPUuWQJvZnPfDjKm01iC6EbbrhBdg3BxozYBw70sAMHPlLHh/pxeXF2BHYdifuQHmdKYLcQ7PIB5XbVVVfxduMX8m68dbIrCT7EX7VqlcB2D++oi4/1bYddgnFehO2whfp65he08HE89ibEVuXYu07bg62Xgg4KtpqH72effU6SljAWS5cuJWwyif3ztKxioe07yrujwDp97LHH6LLLLmV/o/CMLZuwW4pd7jhjhg1DcdsfefRRuoG3Xsf28ffy/oxr1qyJbGeQVy9s5MsIC8cG5AWy5DoEAvImh2ppBsnspxctf5wZ/wP1FdQ/jtNlPznTIKDmoCcNysNBPICIyJb8qERpZGHY5OffSDytMkUuFyxYQD//+c9l1wx0rrlz58pZDPfcc49sd/Qx3locB9Kgk2L/tW/x/nBLuXM/zRtY3s7nFSDfEG8AeSvvA3fXXXfJtuDYnw2dFwooLm8r7+6LQ2SwB9uiRQsLOMVhMTjiEMoNyg7X2Eod+9bBukEYO4Fgl927775bNs1UIlBgaNtrXnOJRGHX3T2slOGwFRLOkMA291UcbmpqFOUIpYy6Fi5cSFBQ27Ztk/z4ueyyy0UZo73qoKChfH/J51eEYWG376ab1simmnN5h2M4tBnK93fe/nYfhqBvtwcba95///00ffp0X7zyUNw3lpRIWEBejGVlUQAYtgsNR9OLlseJ2f9dS04aLm2EWmcEAXTu+3AAHPjTsaCYb/LzLy7C8ASthG6It0HSM1KPHz8mltUwKy3s54bpWn+/2QMsbB84nJA1jxURHJQDOj0sPLjgHm1xeWHJDQ15W6ILAf4BvWbeR24hK509vPMv8kEx2U7PVn3Pe97N1tn9kg/pOFkMf3A/4JO0bAeLCtNonK2AsxouueQ1cozidXy+AhQgtucOTpexn93gYOGxjLrVUpL2AUOd9jY3m23Yg+WC7VG+g/HAI5ljyytCThCPpGLy5kvnQBQ9k88hGiaXEXyM13Js1LPjn9xPgIPJkhyvYvk5PanDiVZv4WP9br75Zjm5aisfwKwOVtKBAwfpbW97mxzhh+3H4SbzJo+YwkKxdXZ2Ek7egmW1ZcsWWrFiudB6xzvM8YRxeXFqFerFgTe1rFCDDhZbFVtpM2fOkBOucPaCOig8TEWvvvpqOXCmr69flLKmqx+mDDB9BP+Ps3X3AteB6bAqcbTjYl7rG+K90mz32GOPsqXYI/za8XodhoW2D/iifdgPD9ulw6rr6OiUJYBgOVivOEBH23PgwH7CNu7A2Y7XehP5GfZDqS9DeuNZP1Rdt+YWM3lHK0SDx/tpzmyQ0TwhXdGyXH8a+uB3cSdbDAn4Vvrwd+3gcycS8mXT/9SHf4dqags7eVCAz5zmTs70ZWfg//t3kfz1nDkpT7aC5cPCOOsAJ07BgsE6WpjD1BMKD39weIUDDk/PMLWCxWcfPt3IB7ToTrnF8sbVK5Xwj01P4+CjXvCEqTT4CFqPdt6k17DYojbnLEYjDAttn+IMGrASbbyC5YLtQRhKOBhfjB+kL195Me863RAql50L59EtN7+hgIzKWZj8b/jV03TPOrMzsKaXuj+WK/3aD33kIwXgxUX89Z138jQBp1dx5+GfOH8xn2uZ+kjC+9bL4TFxdLXeRazg0vKPE3++tfPOWL6VPvzVvIisx6wtTXgkIQ5QAf9wce0wOZL9nu02J1JFKThQCSoPKDd12N47uMW3KjjkKZY3rl6tw6ancfBV6aoVZqeN9HqkCg71hWGh7VOckc9WcGHlgu3RsPook9QtZgtw7W/dHJq92JGEtryqvAkhDmi4owPHd6br6zA4dn/zzqL9XOu/kS3f4DJFaIOsyP/Gxz5q+WL+SPQJ9FXVdavZklNVn8DfhSMDE+TTIQmMpcmPcrt4rUXLF/PPJ/1PfSSpJYej96p4kfwM/cmX+YyHCLx6zia35JhI7iYwAnU8PV62Aq/aiFry+Z2L5rIld01o68WaC5GvDXzGwz33Puyjs7hjkS8cJZd2fJr+Xmr64Cttfwf/tb7pocKo07+wsA4N8OWGsKcqOCScmr7UycTLkD7ODa2t482U4/AJ8h+Ll2TOf3IEBIFdu2BAsAvIVxO/mmivc/rS4+TLWa7Q/hlF30cvWH8c/UB/LzV9KIXU+oT5l/3kBFUAaz/GycOFeKgAQCqS4KP51A/iC3q5yxFQBILykYdNP4vqPwnx4W9XGeEYS0zwz9NdozU1XrH4qnTnfo4AIxCwvHxCBzkKWE5Fw1H0Kqw/yy4kImCwTGyXh200nBGFozB6wCXChzMlzW+o5r+VjIDKCjDwyZclR4qPLz2Y3wlH0ovIr7ThJ6E/TvLLLiTSEaH10TCxPII+J+Tp5paG4hCBD8CU/FHptpTk1zkCkBdGIdgPAUyo3CEe+aPkS+lFpLv1TOx0y5JDiwGY8Qr9PN3gE4VDWDzH6Wjq+gF8nWDu5QhI53PEKJv+B/lTeXMu3LDGqz9x03NLLm4kxH230yEPoSMqZwyLzy05pwflXjIE1PKCnPGfyh8Kh8mXpueWXCw+3s7ADJRgxj/hfp4OWfMsMwkVGSkBpuKmvoevQyH3cgQEAUhI1Kek0XLngBcyU/DTK5Q/fz+fuOm8+ZbuVmAGjzwcjYcRJwyxtise1hzG9+jbVPLrHIGgfATDBiGVJsUrOhwsX6lhVnJGgwMyaPY8HI2HwOOgZK4NXt51eNjgWoivv1weqnQEivU/g49Kk6IVHS5Gr1LSQyw5tejU9ywPHTP8fuWkq1j5fUXDH+uFovHx8uRXOQLa34K+Jz/hGEXLn0nxymtOvz/x06395BhCqHYg4PM54AtXeDo33+8AToQT6IrgF1E0j64sBCBFsqwW0v90uS0ckXD58+gVkT93ERAM8F9I/eHxmr/86fPOwE7Dcj84hEaHgVUSx+AWxReClbuKRwByggeo4gK+G+8kJ/Hi6BmhZCqBeiZqmC05dqEaPI8PxQV4JXXOIBdKBwKWK7ikSE74fBCFcEvOiU+JQBy9WHlUuZxAfm7JQXjSjmhJBY7pCuk4+rmiS4rmhM4HEXEttoC8uPEpEIijl1reA/yMt/K1Zr5v9zS0KA978mThEb844hXRK4YxFt+09JRu7k84BOTsU5EHS96klSM7oBvvCJiNUAvpVVr/rsUowa8ginKGajOQ5GEVDRsPb6hN2Me4cBy+JtEeUBLSzbNNOARk+3kWFlvetD+mljtGRyhF0Ku0/u5actrVAADUXrmFcZDLpEktNKl9VqyAnzq2XzYYjOMfR9u1TZ3N5zX4D0q2CQ/299CpE0f4DAScp+DgkdbyYibUkgvlJy09m8H8ekIhIFYXy0No/xuBnIjERtFTeRbJLs/+HtpfRsjvuLDk6hsa6cqbP0bzfuN9NKStjxDx4Z4u2rb+Dtr66N1yzmhwZJx1AZ/x+VufoSlLruVbHe1Q7tjW9fT0j79EJ7qOi+pPPaIykdySi8Y4T/EQyC05mBKlmUmyJWe6unb4cvQXX349zb76fdRTeJymJyV6VddOF//2F+ngixvp2OH9riJDuxoa6mnFDbdT86Jrqc9/kp2W9vktnavp4jVdtPFHf8aHmnCBtCMqVxqLb1p6Pu7ywERCwLPkTKt8/XAEcuJZciH0OMpHf4KHazs6O0zfNSaPt0wUEcZpV3JDjIni5GfIJMzGNvuajpN7nGhV0UXDQfrVfDLstPmvoQFzyp65Y/w7iWea13RU04luPqB4j//A437Oe8lvrKV9Lzzoqw8HIM+6eA31BGhdfEEVLZhaRS8eGZY/txK+mLPyRlrywl3Uy8cAtra18hSXz3go4s7wWRDqbDwAtC/sLA1o3tyvXAQ6lizhowzrffIKTYT+M+/CudTCh2sHnS1nwTTT4Xhljstn1x8D8ut2e3Mx+v5eGvq1t3803TFlf/WNO81pWs7o4g4ybpgbDMfhxXwMGo4pS+Puv/c+Ws9/KA8Hr6qKvz4LuPmslC5sxx+xYiLqYmVnu+tvvIEar1thR1EdK6jHe6G9/e6iKVU0u61KrDsoOtvVNzbQB27/IA3yuaFLl05lXgrL2/lxvdk53BnXImDmAr+BsL8uyZD/VCQCHXyq3U18gHeYa2+pp4XzCpXcoYMH6SD/hTvIFttzjohBAX3oY+n6+i4+evSvvvFNQ97tjw5BN+zUzmE5kpD7fBr3+U99JjH9kegT6Kvav8a5iuAbfZd9o/mjw7C0xDkZfZYJE7LDUFbGMoumF1ZfAf1zhXPLXUeHaXLTMCufQgWH8v+xfj3t+/UGX3tgya1875uEvP3z4qvD1Md0dgQUHPL084OHv/3ut8WS+7QcSVjckrNp23gAaF/YzphfVzQC965bR3v27PXJq/bHDj6S8K03vzElPmYwVnnDKVfo8GH9Lb7/ezOzAvkNyDMMlAe42nh6wfTk9EeiT6B/anfu2JkSPCe7tAQMBzW7Pzxa+jgI+OCOJ2n2Ve+hfkvX4XrjS/5pqjakZrCbnn7wLj7B/oRGiY8T5qc9+zOafPFbffFQbmEKDgLxytN30bat2+SA5NOnnCMJfaXjA8XwiS+dp1YMAtyPzHnDhS1urBum+KlpYRmxWDjalr8o+mGlC+IS9PdS0wdPI9EnhfPAgtaNfcTLLzxMLz1wB9UNnqTGOor9G+7aRc/88A8KFBxagRPmn7nna3Rqy8+oqQgdpB/b9H167v6/cU+AH3skcg5yBHIE0iKQbu6VlnpG+QcGBmjTfX9PWx/+F6qra4illm8VJwAALMlJREFU2tfXQz09PZF5uvh1kEf/9X9R/V1fopqa6Pfkhob6qY8fNvT3J3mkG1ldnpAjkCMwxgiMCyUHjGB2nz17lq/wNzoH5YW/3OUI5AhMfARkuqrzdmc1zZ3H52EjAIpPWnFIil9aunn+iYlAMXlJ2+pi9ColXZQcnsDAmV88Yc3DYXgISCl+kuKZgmSedYIigG9Ni8lL2qYXo1cp6bklx5KjllqxkS2tkBWjp+lp6eb5JyYCKg9R8pi21cXoVUp6bsmx5CS1XNMKWdKRMi3dPP/ERKCYvKRtdTF6lZLunfGgCKLlquIRl4f9eChOCXx8P2i+IbQyW3jaMFs58ssKREAkBe+iWfIhMHBYLbs0sKCMlAuhV2n9m3cGZhQAhO3ysI1GIT7+1MiQWWeJxhcw54ouEr6KShBZcdbCg/1RZxppAEEZt1yF92d+hQQa34Iv0POAe55u4ZPiUqy4GHxt2FOQzbNOQASiLDnT/9JLilpyef8lYiUHjR+QmkA4Tw/gkzCI0TkOX6SmF9+ElefZxhUCpbTkKr3/uvvJjSuJGCfMuqNzBL+5gosApgKj42RlVGtyFYhlsMnVOm83c3i2Oxy1n4eNhWvjEQSvWFjsuDg8ixHI0ysGAWPJRfe/tEDk/dfrv64l540Wxr7Iw2pnBfFILm4oqTiqrxNUhLWG5BTznBMVAWPJoXVBeRuZlIh8SdFwemHyaLCdePlzSy7O0mJTLLfkJqpaKa925ZacZ3nhzmRpieaWXMTIGT3SJe8cGBOVjvr2SG3GzOT08pwTF4HcktPekL0laU7rUvosQ8EnfjB07FdIxiodh9DMmLeUmifP9E3zgvx07d9Ox48edPeAC+O/edIkmt3xWqquqStsL2MAOIYG+ujw7s3U3X3W1/603SysfgvutOTy/BMWAUhyeP8bTZOLyV8lpLMl54cwECzo4GOR3sTbll/125+j2atu5WMG/fwGQ7U1RLse+EvavP47NDg4WMD//GWr6Ipb/5RqWi8IFvWFcfNPv/wkPfOTL9GhvTt8aWkCcfjCJPcsvDRU87wTDQHIG1yx/mVyJf+Nkz+pL1BhIFjQf8ZjOq/JGcAcz31nrpzCnavW0owrbpWDZgZZycX99fIel4tv+ATNmGsO1LDb19jYSBev/QQNT7oglgbo43SwxnlX0rLr3kfYNl3xSC5eDq4x+FZVs0bOXY4AI1DtHNZkyyuA0XBakFRetXwlh2tvXHMT4wf9DBiK+zjBZ9fOHZzT5B8edvyQME7XWdzRmYiu1h+kz7ef2uctF6XEhFw3bRLRLZfU0MFTw3TvFr95BwV13W/eSl17N7n5cdHESq5x7qXUzem2WzW/ii65oJo27TtHz+33j1Wzll5Lv/lbm6iPt06fO28uT3FjFJMzbB48eIDJG7EyUVhxKcSrurqazgV4sfnKrysHgY6lS7mvdDhy4++H8+dOpzlz5hSAcfrMaT774QzH+/MjbKSYfat/rpaT84wcan8r5svJeUKvUH6lHov+SPp7qelDn9SahhfgFxnxLTmizHRg7chRPhRcWvpotHcghqlHa7OZmtFSRTW8h8o8PpawvYlP7ArseD7Aa2p9PRAAz1XTEDU4t9+LJZrVamjNYppGYLxUTCn7es/KTsJDPP0l8itUKyefm1lLjTy1rq2tIxzA4zltgd+v4TXBwYF+L1t+VZEIYOCM6ys4knD2nMIjCYlPIzRKzi9XYf0RCnT1TTBokjvTD/l4UGfALuaDvlHUyeswSq44/6AYh1FUjdBXVXMXLGOlXzgSmAaNfTzOXL3mdz5L01b9XkE7Lp9nzkrdcgh8eq6Wld8T3/kQvfDoT71IvmppaaF3f/XX1DvMp9RYbq6c31pFu48N05HTflp0ej/98I+u5QcQ3XTHn3+Bauvid4yHUqzmaWh9XR2dPtNDf/x/vs0PQaAccSML8ezv62VrzjqGzOIrv6wMBOoaGvm8EchkoXxAbi5esYj+y3tviUwPK/fghqfpnnUbuEy43FVSvOwnZxoMgUqmUc9nPizM733hITmhCxzabvMrwxRUcEgf6HqFXn7+F3ZWuca5Drse/nte//An7e8apo17zhUoOFiK+576IfX29voLxITAL5RaT28PW3+91NrSTA0NeviOVuz5xQ7miakqT5oACGBANAoOjfHkwjQtD2eBg7sLCRYosX5Ujv6+7Zuo/e4v0sLXv5uqG6fGPpE8ffDXtOmnX6XTslZhINJfnPr1+F1foeHBAZp/9a0FT440n/h8oPUeVnCP//TrgamnL1dsAPUdPnSQZs+eQ8M8fe3jk78K8GWNW1tXn09bY5GcuIm1/FALA2OBXFj90Qgq1teS908gVoxuGnpx/JU7Hd8uJGgIXLn54Gnvsw/Qcw/9K78WEr9Sj9dG4k7iOnPmDD30gy9Tw0/+gtupIyVq8DsICOgMDcXX5y9VGAKNw4cP0YyZs6h/wExLtVr1a/mYRbEAWfnmrnIQqKtv5KUNb/lD5SHomw5pvggAOsH06LCR7+h0g/VET4+15HSJIEpTn6/0SbyYf+LEUTrFJ9hn4aC4sMZ2vhymu2dOn6RJk1rlWEXF08avrh5TWp7qysON88VZXs9YIYD7XVMDBRdtoal8RFlymq7yZPvSLomInqHFlRfF5ywR2nQRr+HxUj7WktMlgihNfz7S8ZpFDe9fHDb9VAHFU80afkIFawiWnP/JpuYK92HNoby8zsFTSkwx0ziUNxahebF3eNh+qupRgoJubWvnCG9EDuJXV99EVdX9NNifnwnrITexrvAgDQquWhScaVux/hVlyQXlJ0hHTb5gvIaLl0/Gn9IL+uVCvxZqGQpbHQxcR4H7/LFKx1PKM6dPiQJTHtSv47Q1nR30loULaCE/OT3LCu7xV1+l7z73Ah3s6tJskT5eDr515QpaO/9CmsZrI4fZ4lq3dy/9aMu22CmvEmzhBwoL2ifTVPZr+I6eZgW5nw/APsTrgUFlB+uxh9MauJ5ensIGcVaatfyUrbqxhj8r63eeympK7o9vBPg1JX61qI7XX6W/Of1O5UDbpmHblz4K84mdHW/302B5hGVNDr4msp+0fDCfkgjGa7ic02uh7dkG8TVfw0Ff1V8wXsOlSIeVdeZ0oWUDBffp111N71pwEQ0762bT2Zq7aN48up5fnPzMw4/Q8wfwUm64a+XvV7/0xmvo9dOmQhok03SOW7lyJV0+fTr9IZePe6qKvJfPmEE1TlkQgAKb3thAbfyd7YtHjxdUjCeubZOn8gMItMfDPYgf3n6vbuD37YaH+PUS5w8WolVXAfE8ouwQgNVWxTMRvAdnvyKi9zvoR/UfaCYzWzD9NFhOw/7yKANIPDnzp3vx4eUnTrpryaGhBsJy8/kzrpB1qrVLOn0KzpbwaSxUn191Bf3+fUfZIit82RaK88OXX0avnzqlUHHwlPX6mTNpz+WX0rcefzJ06oup8YqpU30Kzq3/3LBYlV29fbyOeNKNxgXaUVXF+DLQSfD+yh1/Sd/6+jdo586dkPPAUDTy8CJ+MfQjH/8Y3cm0dzNtc99HTs8u38G0P8y0P/fJT2VKF+1fvfYmeaH1s0w7SzzA/xqmjRdZgbfdnizqAR5wwDvJfTf1e/1QGGKhCcYjfMVrr6CDBw/SIR7Q7XTUl1TO7HIj4a/cy/NQwxobd7JcfXmTDzB6ro5fyL1l4QLXgvNSvKtLJk+mS2fN9iKsq0k8vXzX4kVWTOCSpeO2RQvlm9VAigRnshXXzIou0rGim8EPS/R7RC8ftyMFzlIuRf5U95GJp8qfgo9S8a04loRvUZsGlKzpj5ZvYS0Kf7CMCoLpJqowPpivAsLufnJmHAdaqlDKxMdwFHB4gXJha8hnLlY+vJe2kNfLnthrRTqXC9v5AQCnx7lWXhieMamZ9lkvAu952Ux/p8yby09BRbSiSfC627HjJwrTuTmmSdqueB/rKmnyJ7l/Cil80DcuG1/pqZ+En3T1p8Mvbf1lyTffml27XymUJY7pXPYaOnSkKzQ9a7lJd5+ykae09y8sv7ufHCt0k84+wCmncPDuQhB7+H25KWzRRTpuQHfEk9KziJcGRpaW9LP88q7tvvb170nwfTzVXbZiuQHKzmBdP3fsON3xi19aMc6loxsT4ctFlM1E+SFXCe6fMgVWQDfL+10Kfl3+lHGHb2d+lgn/SjprPNRABH259SPA+/ktu+iFrbtC++filW+g9b94mtbfe29B+kjrc/FOKE/lnr8aDMLBx2W5hV3DUrg0P3hSufHVI1ZM4WUVTyc3HTpUmMAxe0+epD38pDPOPcNK6oxlxdl5N+4/QFXYuC7KcU/ZdOxY6FqiticJ3iBfqvshtEtIP0n70sobeFaXNX2bLq5LQT9te5Pkt/lOkr9U8pQ1XlnSk/3koPExgpWjjxuHd9hsByX3PX5N5JQdaV1X8Uenf7v9RTp0MjwHvkL4ztatrKjCLcEqfnL7D5zeH2EJ7j5+nL63czcYs2r1Ll/hbZnu2radOwq49xym2RhKkuKMkqW6L0K7RPRLxTfowiXFL00+Q7k0eLu0wTszlYavYvld2hnTLVbveEoXSw7PbYzmLD8fS2d1/H5R0O1lRfOZh39F27t7CFabSA8rHSiov92xi/7m6c2hT0aVzr9v30F/9syzdJa/HcVjfpSHf4wr/MMnnqCHX9qjWQt8PCW986lN9N3dL0l9RnK5PPPxDL/T9/kND9NJ/nws6PDO3yBvbZwUbyjEUt0X8JaUj7T5SsU36JaKbyFcIrzHK99p73u55q+ae9FSsTcwukCEys2HYqjlLx4OR0w9scPHqgvm0AJ+moq1ticOHKTDp04l+uYU7x618FPQay6cR1PZP8JT2A179yV6ERidAq+SrJw/j5ZPbpfXSXad6KJnmE9ssBnmLpg7lz70gXfQ1CltYckFcVdefRVt27qNTnN7snStbW20bPmyktJ+8vEnsmRZaGHTUmBYKtqtrW2MydbM+V62nNdv2SWl/ZN7HqLHn3w+UX/8yh1/Ietx69fdmyh/ufXv88FPrTc2murcHWwddTfWYUwZm5paZLuisA/vEfcIW12PjEA0MZ08zd+wruOp7Ugcps17jp2g7QdYsTEfcQ7nVODlUHxyVlcfPk0Olq9mK7OuriZx/mD5qDBolpx2wjZG8RgWX8ProMJ3iWjX1DDepaDNdOGS04ZNBAc/vl9KNsmXLH8xehMx3dlajadaglZ5+n19A9SO1z7GqcP6xZQpU1gRek9rDd7GckazosLa5Kj0kcaPN7razlLxrfRL5afjO3k/NHST5zftq6z8bMnxmIH/aH2Z+vi8aubM6fSGa95Ik/gb1SiH0Q/nTzz91JOhXzqgHKao8+fPp9e94RrZvTeKVi9vePnQL39JRw4fjsqSOH7KFN4Dj624vj7s0Q4u9be4L5lT5DfUJx5dbVep8FD6pfJT8c0zjKT9Uu50ivzl3M9LpX943sTajT81Mr5zK8os3MK76370U5+h32DFJCvxKjEhPpTYj/71+3THV79C/SFrY9ffsJr+95f/nEuqOIcQcaJu/+gn6Q8+/2l6fOPG6ExFUqby51+NzZN4FxV+ZQUmnWuzFSmYJ1cuAmJuoV86EMT2R82nPpeJzV956fxYkTu79Hf4uCi/8A2r17CCewOzJ+ObsCsss9JwOHb9c5zn7e98Ny1fscKREM9rbm6i93/wds7rpwMaeE0lSAuHUL/v/b9PjfzRfZTDulyYwxrcBXMuoIamZn5w4JyopPiGFQiJO3M6m/3zQkjzpgfjjzZ4LhXfoHs65Il4GHZp40A3FW0Rbv5ReYkJY+YigoufBPnLsX+Xmv/aNWvX8j0Dijps4BZGh3fu2ClTQsmvRSJGjsW8DVIH/8XRQ212epA+LLMF/B2p3D+TWX4beYF4ZnsLQantP3rSl468S5ctoz27+V02y7W0ttBFCxdZMeZySmsTtTY10MnuPn71w3/s14JFi2hK+5TYTTZr+SlrIz/lreb386AYoYyrqmplytzX3+tAqyOtglbARkHEiy+O7IFIAaFAxGl06BIpuZx2AGwOHozZDUdzt/Jnii3Op4qr+Kn65BnzNIn98P6IvnLn17/ppatoRfTHNb+pp3WF0/Mq9NLv46e2SS3DkfT3UtMHRqmPJNy5wxo5gAoDC6VibCoTVs3cweeupj2SEDd0F+owRIyCAOYBV4N329jhbeZafsl2IGBR3fzW/0xXrFrlK4XXUdRisxPq8J4dO/ekbStxEn+/+rkvfIEGQnZCsbLJZTNPSyGon/3kp/lrB0dZBvHRdgUL5+GKRgByo2errrqqlRYu4cGxmOOOJ2cgR/Q/Ke7IX0dn+r5ojiTkWU8C+uj/a9auSX0k4X3r1iWmPxJ9An1VdQG/J+cqFEVFOiKGBWgX9SXRCmu8+qVLv/3DH6K33fpOrcD1W9j6Osf7rHX3ek8tkQjr70/+6A9pw4aHEOI/tIN4+/Fm+v6//YjPRm2WsP7U8asJTQ11QmcwoCwPHthPH/7A+6mnR4VO6QV9pRaM17BJ/+wn3svCPF0z536OQAECP/zxA7TxyRc4vjz6n/Yfw6jKc9DXZgTjNTx26fzgIajjNGwUg5iqzqWwCVNYwucv/eGHNtDbb30XV2szwgfr9oS/m/bMpqdo01NPOTKi/BL1cv51P/sZve22d8qUUmEf4I/98Rd0UJYP8GHXKOdWPdr2u4SCteXh8Y4AZglmNoCO7bioPh6TjqUPnGsibgTlYXnhfUx8mTM4xIcn2d1mtPI7DstbT1ct1NEQ1wJilCU8dulbt26h/85POW9YfRNNnT5NGSn0me2X9+yhH/7gX+gsDqoRWfP4Hzo3RN/9h+/Q8ePH6PLXvpaqI75dBeEB3mzzmc2b6Wc/+QnLCBMWWkhReohwcEqLD8jkbkIggJeTa3i5BAPiOZYv/AW/WU7b0N7ebl4DxoMhux8qFUvuYtJreaswPDCrrW1mRTck/cHwlYH8lpl+KKafqi6YvwSK31ZpPuiiIB2L+BpWSrW8uB/H7xAf+zfIo1gx/rBVueirgChpOVSCz7M0nJX/uU/+Lk9XZ6jE5v44RgCKpJq/Zujnr13wlH20yk2h+P6//Ds98thmDY7Kxy7YLfwwrG0yPzzj9037eMfquP6TlZyXEx0+44H7utPqcvdxXJ8smRW5SwC4WLv6+aCYYnc7CZ1i9RSkM2vyztyoRDcvPNYI4IyR4XO9cg5I8NCisebNrh9T1i7eWqy7p4dmzJgp31t3nzWznHLv75nxN54suSK6rZjOytNZ+stphB2v9xNf3QwN9NCrrx619UnZX2NDidmz5lAfrz/3sVU3XvFPyzfvTWQEP/dzHFzLFd21zOSisamRWlvwig7/NTfz8X44BPL889nQWE81Vefo6NFjqH1cOUypj7x6mB9qmHc6xwK/MZGrObwmV3TeVjE6P+0Ykec/H7bhm5bNoo+smk4d7ebdyD5+EP6jnf30rV+97Lzac/7uQ/vkNjrKiqKX17bGa7+RF4/bpvCyCbbwgqo7f/iNRX1yxoP5Oh+DkjN8y1e8eTjHY+zlYVp7K33lhlnUPMTf/jpv+eDliv+6tJbP8LiQvr2Bj1R0zyQqLb/YvHVwsN9RcE7/gMf9Bk9Xp7U10/I5bdTeXEu9A+doz9Fu2n3ktLW3IRQKXLiPg6dbZ0ymxnb+FPBQF/Wc6na20A/PH6TT0NBIk+dNo5q6ajqx56h8u41XSYL5zvK+idg0AqfJyZsDE7y/82ldAN3S5LpNgWr4PByLz0c//nHCW9s7eTdiwTFDvD76iY8x7XuZNr4AgaDzfcqAPt5+x+d8Pr4zot/R0SlnmH7zL7+RCb/XLp5CzcP6IjaTVMfvf62aVU/fYcXQxzvGjBYf83kjCd5R/aGOXxg/K9aP1V8Yt6b6Grpk/lRae8ksuvTCVprcWMPrXvw1wtEe+sXWo/T47pN07Aw/2bT5VLzZZ/1IF13ZSZe+/xqadulcUTzYDGn3T56j5//fY3TsFZxn4tz/gD9pEq8P8jR06S2X0/J3XklNc8wpdkO9Q7T9Hx+nZ/7p0YJ68ZpLd/dZ3t+uTj49jGpvVvI21vRzS05kBz9w7KcM40BidOxdouTSl4+rD7QNVyPnL5Q+RxrapoNlaskzw6BtOB49Hg28K3SUq+MkfN0HhWDcyOsDBXx7uf5evpCBBBT99GrY8jHnfnj1wYLrnD2ZPnjtAnrj4jZqBlNiNBAtm9VIS2Y2U9ukV+mupw+yQtGX173yqGXB65bSm7/2Duo/N0gDw/zyruMuvGUFTe6YQQ/9jx9T1xEcb+kvhzCe8l723muo8/dW0dDwEA3ynzjeU2LZB15HTTPb6NGvrnN25PHKY/uy1rZ2Ex/R3mD7x2uYz3jAt2kwWp1/9jXi8vRYfCBQGNdLgZ8Iq94DrSGD+6OdULjO+P4qbR8eNs/2tbbNjrOvJd2gEPWbnXw6aBfU7/QB5oVYoQ7hCwJcO39TW+rpTctm0Bs7oOBAA2nG8ayROmc00I3Lp9DCmZM40iun1/V1tXT5B98kCk7L2X7bihm08rar+dUPrEcWlp8yfzot/b0rRcHZ5XCN00QWvHUlLXzD0oKy59AO1nnZ4efc8Rj8JMcYpOMYF0dBGy2vo6LPlyx5OgTHhwsiHBeM94VHgZ+Onj56XKcvPAL6Pr5HUD6qfuE3A/48+sopUcPK/0SNr38XVU+e6UZKvkz4NyS9epkoO5t+lVg8Jl7bObOtiV570WRqjrA4oegumtJAF89tk3U7Laf+1EWzafIyrz2GC//v4t++lC02fnldnL/+uVct8qw3fzEJDfGC5bxrOlhJ8sdN4kx5bHOO99Ds9iE5rv3jNd3sDMzcQ8vC5X46HAS0EuJmRu/s70up+M6eX8NpVV0j1S15vQTOnThA/SexTpUlLkKuqPxr+9Rv5Onp5CYoECM3hor/F1PutkZVMprP+M0zWtw6/aW8UC2biHVNdfzAw9tZGvVhqtw4lbf2iqkbVBqmTZJpvbxI7+ZNJ+dax3j0jSXHQIRq8Dy+KC4QIrhS4QfKpaAvREvAd/b8Gk6HB3qpf/uvaPDAdv7bpuxniLshWew+avvU7x0Ypq4eTGHVwnJZcy96+SHEScmDKM1n/G5++qp1ugUCF4Nn+migR3fa8cpjqtlz7EzR8r2vnuVvapWoVx4xWvdE9qtFM7NSz30BITUOKjolwU+Ij4yvYvx4pLOlrxZNsfqTpyvCRP1bHqLex39I5056524kp1OsnVyPZInOJ3UFLKFDJ3voyZe6+DhMLhfi+E0S2nO8j55/5ZSsfyk+6h976TCd2OK1J4SEPGUdwGeI4rQe4+/fuItqq8x+iGFl8bBk74PbnLVE5DDlsP+b/kNUdjgKsbKi567JCUCs5EWjW8o+DwsoRn5C8DEJzm9I+qjw825KZP2jop81v0zPs1TM5ej5M02P+h09fQHBkC+GB/dfb23LFOk6208bth+hB3dA0SFOQJDEgXNVtO1wL93362P08tEzpoCVjogB3lBi81/9kuooXFGdfP4wPff9R0PetTPkuvYfp61/tzFU0WHbpz13PU97n8QrSOoMf9X8iRcbghXR393TugR7KGGsRvL/PMwYJMBDRUf8BPlT4esS5QvIZpb0QRv0zE9m9IUoaMNlwG/voDvPMjSt335Owvb3qGfU+IBuETyGeM5XL++Wee/t4eP83YdP07cf3EMvHZ1JV8yfTO28RtfHfO840s3vyb1Kz+7vtpQUmLXdMO19ahet/8j36bL3v5FmXjmf2RiWfel2/ttmevYfH6FTx+3Dxf3l8bLvc//8GJ3mIwCW33YltSyYIsQHTvbSln96ip77wWP8mohOdZFkyjc1NomCzfr+p5Jv4H0e9A0vibLhKp/7c/tlJEPFjsyIn6fH4SMSpT8+3BTHkeNnyDpEEciIvigEl97I+TNy4i9veM5Ofjbs7qKuq9upnXjnDNvV1NGThwd4myOexjEu4jLCJ0r+sfVWC3+c7z8fo4p6+tka28PW2rGz1DmLXwbmBwV9PE/de6ybLbizsQchgXmsrb3yzG46/Nl91NTSJA8TTh/oYiU0wF88OO+92W0PXGOnkRfufoJ2rHuWJk1vpWo+PPzMoZPOFw9+pYii2Nyzib//PXHSrAfGyfdE0A/8xQNAwJ+RFAMJ9LuG8/Q4fCA0km6Ac8bJ7PCTOYXcI70fpr5R3R+HVzCb9f13ABC2ldM4/MSSkELh7Tt64hR97v5D9KErZ9CKmU1sSdXTsZNn6O4X++h7G/dlyL9zGwWb8Ps3yFPLGlYOOImth7cuMs6ACRyPneqRPzz1hDPY4orfzI10ejMwdR2ggRMDdIrbPBKHl4379usLx9EUWvgriQG2NIfPad3ww/Evdn/GQ7rsJ+eabi4upsFuUIc2NyJPd6GQC8bDB4kvwNI+inQhNYry4C9Yv7IHH3/BdH9j0qXbtFE33CjpP7bjCG3ed5Jw2tT1N95IX/js56mXO7R8l5kV/+BT8YhpPzaenDp1Oh08uN/Uj3IB5ym3QEIZBDFItPNZwF1sxbnNHOX9Ge39LXX5WjPysiZHQ13naXYTlacXx8cFjy8yxA+kQC/L+yM0HTazpm/TBuviRs8/dv3o7e2X6Vs3trZ3eygqGD19ZdPtDxH0MT3GVwrTp03nbYvMu3pSdhz8YJdgbJzZ3d1L54bstc4M8MtSPrPsP3xfqubM71SxHAe3KWcxR6A8EGjhve2G+dOoY8eOOjuFlAdfUVw08OE4UHD9A/xxvjvVjso9seKr5lzYyasJZoUH2k4WGiXMC6I+X+2TYLyG8/Qcv8qSn6bmJmriTTRPHD8uu3pgN5Byc/iAHzsZt7a00Vk+VhOWqL9fT/z+ayw50ztVS+V+joeZDeY4FMUBOxQ3NfInZ+zjhd3+fhxqY08Fx0bt1fJ7cA3MVzUOXucntHJ6XYXezxhLTnVdlKbP043M5PiEzwSyk4963sdtFe/Xtni6OYv0DL8gd//2o3T6zFlr5pFdfSNtD9a8anljTTxclechvpnR+eVvmN+f6+dXS7D2NtL2TBT5zi05TxpVCnO/jEb8hoZ6+vz1i+ndnbyLrWxzZCyj57tq6Iu/PEzbD/BZC2XEr6Xdcr7K5L7UtLRN/eOxMajzWnMEiiNw1aIZ9D9fxzt1DPD7X3hf0Pmb1TBE1U2t9Cv+bhSHhucuRyAKAfniIR9yymTIyU0SllO/ab1gShNbcPZnSZ4oL2yr5sPGa2iQX6INlsvDfhwrGQ/e5Aozdjjza1aY8nCOR3nIg94HEdHAj8qt+kjO5Tfvz0F54DMecPSqiTYyZF4ikdVTR6gwJtguizBqMQKc0Hc+lbH50OvgG+ZZ8Ke04ef0bDTOLx5VvE+Ouqp6flo4aSoN8aaZcEip4u8w8S2m7bwSJjYP2+ic3/uHmhPjj6UIzm30EUrZYVCC89JVnRejL7uQYM8pQw5k8c6cCYMkwji6DLs9YOsWrRhpxqmCNFWZ/FWcnz8E5vyGHkoZ5rx6vLChj/xmVwlzVJqXLhsVMC0dpTUM0ZZnRw4LUHb4bjD3JxIOngJrXvNxqqrl07k2/5wG9mzmu8+Syq9IyECd3/cxkXv0bFs/nONdWUxPNcrN9H9PbSE9Mr+rL1Qfqf7w9ImhbzQP6jH6CGGjfzRs9I/RJ7U1ziioWWQfew64YVZwcEbB8UWR79x4XJXCOgAbRpQehxwtZ+izkHLDDH3xuLSpXNPFN1GcAeqXA6YKU47D+IYRg4B+GJ37DnoOtuMdDyMZfH9ZwZmbbvZec5qX3/cxvM8qW24/5s6phg3ulb//o+uqfjAyKgYNjBNzZ1k/8JX5LzFaXvUJyoO+57SkE+OUd/MzNtXnoPJQRv+QV6/hO+myYwHCcHZ64Fqmjhzn5g+kB8ubfMy21MM+tJX8oR5c+32k4x0gNz+XQzY4xzM0zlN49U1raNHixSWp/0amjeP9BJOM2yN8M224rOnfuGaNoSu/o6fvkKHuB/6adwb+NxrY/VSm9NF+4Ay84bLGA/IBvEshn6WUvyT8aj93fbfPAsjCP8GW4938xfSPQ8PNX4Q+7h/q1fzQX7yc4ahNKMSYP1kbiUkPlk2Xn/W18OH5hp7yVujb+XU0AXtw5zOMjtHB53VKvfKbXf0QYKGrI3VG9Ds6O6VDlwIvKIvVax2+M+LXIUPnTvN3ogde1KCICAJZ3O/FHYuds2izoSd8OZyuXnsTLWJcSoF3KeUvCb/az+GzucHg4YZE/9n54/IF07RcMD4qbOevxW6nWJPD0WVmbc5bPYOpCMYxxcTal4Zhmpo1OkxloWr9DtoasWgrfC+/Nze306FtdRYs+bkk6kM5ycc/2NgPpizyIXK4iuf+ThhaW+Mh8DJaQDEwH17YlPPC2aQzVVTDLMmPVV8W9EEd9Jm20+7M+Fe66mdEH/w6UAgwHr8m3gsnw0foRfwAFrgs8BFSDsGs5UcERJpry2Oy9nt4oaEsBgH5Nu1HEieGpHv5w8uPNh1YqV6I8721OF2zs8sJ6xYds5Zm1u6QX9PR2nCnzwzga37VTrVQbIitcebK7pwYWgP/Hb8aPmtrNyyJXKGTDoBd6lKOg5LfxLtrbU4+d20OYbCAG2Tnd+vXdNRv8sGXetkH3XPV/K2g1o/qoODgHN8La3TW6VyV4iHVZkU/yG8wbOoZafu0nPpy/zLg34UiA/z3dfWxXDTy9KPwhd9DPcOyrXgW/AuSBfyODl+VP/WVT/WD8SPHv1TyV7z9rmJz+yuXwf9A2F2Lk07MQobPe335/GHVF1pOls3AjvbzgO/ld+rHNFjos46ABYeC0LTwdURwAv4wF3TzOfk1X5gPC8vkZ6qSH9RRCf85vh3GWhvyy5qbk1/L+/KjAU55yY8gYuyR+LyGpfrM60cT4cauXYaBtPVnyfcm3izzRy8xCLzdue36ayfRXVtOmHMKMrrvRi6zx7tUdL37YpDxwiO7byMpb/on6uc65b/xNazppv8bPSPrZRH5jT7APfD0kp1f6fp9LmXlN+cvevzUuhrQeYqqGljUILMeDKtmxWN7cWrJ6TAUCJvyrO91lOS6NSvKq0UntJywzKedCOXPThdLzolAeQEGZbWO8+4bZrKuX3HKmm6p6WXJdy/vxPvlB/fRpiVTac1VK2jBggX08/v+g9a9eIBeOnRCgM+qPUHLqtzpevyVRv48+jChIvqX25+dPIH+H9QXQX0SFVb9Ekx3Z44qZGoxOn1e6oMCdRzKy3tysqbFke7aHBMwvMPnOa4oEugmhNXiYzOQFR00tVF3ppFCW0ZWLyyWGZd11+Y4k5mRiz6mKrbMhplJlBD2sHOCFebDYc0aHdeENnGlYEYUsBzC4fAndbtEJCT5DNEShZksmqujoNeIDOqTdmGU4gt1GbRP6Dk8ywBhkR8t/0rP5TkDfrET8E+f6abe2RfT6pXL6ZsPfVvRyOz+CsT8o/y7FWTAvwgIExRMMqHncicXJZM/UC/GL3qyyCmyevpC1+yhH8LSIXJefqCOENb6kd8Li0aQmwNGHGeFZQ3OzW/SHS6YmpTm4xpxyf/VYvLW5jgHklRTGq68sFuOVZxSc32+cPIb33m/jaO1HjTc0GffWouTeCfsX6Pz5xe6qJr5k4cSnOw68GG7EocxiOioJ9VmVR/o4p8zSrlNGiV9oefwrPffpY2LUdBXej6eR0FP+HLKKww+2qPkV+kLbf5R/iVef0bNvyHg8j1qesqY8cG7SxtRGdOPpWf3Y/Dh6Avt52rJ2YYJ6Hn9X5h3w5rfKEYmLvQ4T0CfaFjrEXqIlHx8F5388FlNmASd05o1OuQw8UHfjHRIcyw6x/fnC5bnUpJP1+jYUnPCppzmB3WHNq7kJV/UEyjP8b5yKIP8ouGRHeGgX8p0qS2iXuUjff3SLLcd6cv7cTh/5f18j7z9hfwDZ6UX9EfbPiFcEvqQX+Y2c/nw8AHbpaQfxz+nSXczvlmDAy+efrDX1DgFN074tctpfpT3+r1pl51PKrPKoxzyu/pI6Kt+MOX5A31oUgSMkadPW4Uw4h3N7GRyNbVWLHNnpzyouPnRDl95YU+muFaVJlLKS2lHA3OEWx50WDPLUOtZgr50UxTZxGneQr9U6aALHrOlL/iBskM4a/oeXcN4VvQL+c6WfiHf2dDXG5g1/eJ0R8t/aeSvEIcQ+dZ+6tx01xJDGM2K0x9Wuq7BobxRhBD8wvIuPadezBGNsmCPnbEkuaDyxfXLmpwxDQ1N1ouSAXn4q0B+f26YfUSJIW/KcpyEHR+aGWGeZYpVimqFGseLL2towrHkQyasuSEfkrw1N0w9HSLs8atwEh7GdtIIgzWQgaKWsFHMiERNY+LAk/yVgAOHro7YWbVP6J0H2lnxCzrYdbeO//AZIs4t6OeDnrN0IqqQY7nIkjLTcmiWhnYJ5S8BDGiT6cfmvVazRsY8cVlXrwDXgP6Qfs9x/jU1KQXAUNrBjX1Lf8il0hNcMTU1+sRoAy8/1vrx4hGvyYEeMhq6KKBaFfXIV4KBdMeecspxQX4AISqQ80MPC4MOXbnB+D5WojkDGOP8eAgB+pKfr6HoEEb9SBfHnoSd8lU1pkE6Mmp+R+eZMuf7FzzLH/9k7Ry6OqJmRV7onQfaWfG7aM5UevdrptGlsw7TzMP301ffsoge2ddNP372cGbKDvdQ+oFcZMW5Q8ehmfV9FOpyH8E6GnD+ndTKP7o2ZnouR0g/dvov9IPdvzk3DCLT/+GbdKhCMyA4/R9tAh1Lfxj9IrVxQSc/pxv6qh9Uf1RRDZdnS85hhH0pIz6/r8a+bckhWtMd+0kIa3nV1eapisRKflPOUUNgGC3Ds1KYZBwWC5B/kYQUo/FhTxqGxcecmxusT2mrMA/nsLEApRDnj3CGaEQiR482nUmA98hRejT0QRf/BLeIJoyAvtBzeAb9aPDS42PTFo5HwJ/d0pbWFvritTPo8jacDH+U6NWjdO10ouvmNDPfs+ifn9qbCf8CMf8UYD1K/o18McbsCmgjcrT0hW4E7SzoF+EPbYJKgQ9DRywzkVpumiNaYqiAFw3zhegJzS/gI4M6g5crl1jfA1Acbegb/SD1IsVNhzQLF8ZnukNcpmru/CWIFwJBX95XQ30R6QXxUM9p8nN2sFRAJ0F9djk0fKwcvtWE27VzZ+YsgHYp6ILR8UL7LZfOoz99fSORdb6DAv3w0Qb69D0vZWbNlQqTUssI8CiVnCjWkT76ntNf3QEzQf+19cSIysm8lblKoG/+P5tXB7zQj1DNAAAAAElFTkSuQmCC"
+            },
+            "icon": {
+              "id": "file-media"
+            },
+            "kind": "image",
+            "isFile": false,
+            "isDirectory": false,
+            "omittedState": 0,
+            "references": [
+              {
+                "reference": {
+                  "$mid": 1,
+                  "fsPath": "/var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot 2026-05-28 at 11.14.43 AM.png",
+                  "external": "file:///var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot%202026-05-28%20at%2011.14.43%E2%80%AFAM.png",
+                  "path": "/var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot 2026-05-28 at 11.14.43 AM.png",
+                  "scheme": "file"
+                },
+                "kind": "reference"
+              }
+            ]
+          },
+          {
+            "value": "The following browser pages are currently shared with you and can be interacted with using the browser tools:\n- [eaede09b-192c-4bc8-b0fe-6abf18fca133] NS left green | Traffic Intersection (http://localhost:5173/) (not visible)",
+            "name": "Browser Pages",
+            "id": "Browser Pages",
+            "kind": "workspace"
+          }
+        ]
+      },
+      "timestamp": 1779992191673,
+      "modelId": "copilot/claude-opus-4.7",
+      "modeInfo": {
+        "kind": "agent",
+        "isBuiltin": true,
+        "modeId": "agent",
+        "modeName": "agent",
+        "permissionLevel": "default"
+      },
+      "responseId": "response_c554155a-5e8a-46b4-a355-eab48f233b43",
+      "result": {
+        "timings": {
+          "firstProgress": 5839,
+          "totalElapsed": 79762
+        },
+        "details": "Claude Opus 4.7 • 15x"
+      },
+      "responseMarkdownInfo": [],
+      "followups": [],
+      "modelState": {
+        "value": 1,
+        "completedAt": 1779992271558
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "variableName": "Screenshot 2026-05-28 at 11.14.43 AM.png",
+            "value": {
+              "$mid": 1,
+              "fsPath": "/var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot 2026-05-28 at 11.14.43 AM.png",
+              "external": "file:///var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot%202026-05-28%20at%2011.14.43%E2%80%AFAM.png",
+              "path": "/var/folders/9t/l6y9t2yx3j30746nj17n71yr0000gn/T/TemporaryItems/NSIRD_screencaptureui_3fYJmY/Screenshot 2026-05-28 at 11.14.43 AM.png",
+              "scheme": "file"
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timeSpentWaiting": 0,
+      "completionTokens": 7085,
+      "elapsedMs": 79885
+    }
+  ]
+}
